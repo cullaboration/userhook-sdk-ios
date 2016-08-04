@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'UserHook_Example' do
+  pod 'UserHook', :path => '../'
+
+  target 'UserHook_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
