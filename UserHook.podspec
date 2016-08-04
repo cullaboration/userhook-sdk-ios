@@ -18,5 +18,5 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
   s.source_files = 'UserHook/**/**'
   s.frameworks = 'UIKit'
-  s.dependency 'JSONModel', '~> 1.3'
+  s.dependency 'JSONModel'
 end
