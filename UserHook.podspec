@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://userhook.com'
   s.license          = { :type => 'BSD', :file => 'LICENSE' }
   s.author           = { 'User Hook' => 'info@cullaboration.com' }
-  s.source           = { :git => 'https://github.com/cullaboration/userhook-ios.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/cullaboration/userhook-sdk-ios.git', :tag => s.version.to_s }
   s.ios.deployment_target = '8.0'
   s.source_files = 'UserHook/**/**'
   s.frameworks = 'UIKit'

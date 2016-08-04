@@ -7,11 +7,9 @@
  */
 
 #import "UHHookPoint.h"
-#import "UHHookPointRatingPrompt.h"
 #import "UHHookPointMessage.h"
 #import "UHHookPointSurvey.h"
 #import "UHHookPointAction.h"
-#import "UHHookPointActionPrompt.h"
 
 @implementation UHHookPoint
 
@@ -27,8 +25,38 @@
         NSDictionary * hookpoint = [data valueForKey:@"hookpoint"];
         NSString * type = [hookpoint valueForKey:@"type"];
         
-        if ([type isEqualToString:[UHHookPointRatingPrompt type]]) {
-            object = [[UHHookPointRatingPrompt alloc] initWithData:data];
+        // backporting for version 1.0
+        if ([type isEqualToString:@"rating prompt"]) {
+            
+            UHMessageMeta * uhmeta = [[UHMessageMeta alloc] init];
+            uhmeta.displayType = UHMessageTypeTwoButtons;
+            
+            UHMessageMetaButton * button1 = [[UHMessageMetaButton alloc] init];
+            UHMessageMetaButton * button2 = [[UHMessageMetaButton alloc] init];
+            
+            button1.click = UHMessageClickRate;
+            button2.click = UHMessageClickClose;
+            
+            NSDictionary * hookpoint = [data valueForKey:@"hookpoint"];
+            NSDictionary * meta = [hookpoint valueForKey:@"meta"];
+            if (meta) {
+                
+                if ([meta valueForKey:@"negativeButtonLabel"]) {
+                    button2.title = [meta valueForKey:@"negativeButtonLabel"];
+                }
+                if ([meta valueForKey:@"positiveButtonLabel"]) {
+                    button1.title = [meta valueForKey:@"positiveButtonLabel"];
+                }
+                if ([meta valueForKey:@"promptMessage"]) {
+                    uhmeta.body = [meta valueForKey:@"promptMessage"];
+                }
+            }
+            
+            uhmeta.button1 = button1;
+            uhmeta.button2 = button2;
+            
+            object = [[UHHookPointMessage alloc] initWithData:data];
+            ((UHHookPointMessage *)object).meta = uhmeta;
         }
         else if ([type isEqualToString:[UHHookPointMessage type]]) {
             object = [[UHHookPointMessage alloc] initWithData:data];
@@ -36,9 +64,43 @@
         else if ([type isEqualToString:[UHHookPointAction type]]) {
             object = [[UHHookPointAction alloc] initWithData:data];
         }
-        
-        else if ([type isEqualToString:[UHHookPointActionPrompt type]]) {
-            object = [[UHHookPointActionPrompt alloc] initWithData:data];
+        // backporting for version 1.0
+        else if ([type isEqualToString:@"action prompt"]) {
+            
+            UHMessageMeta * uhmeta = [[UHMessageMeta alloc] init];
+            uhmeta.displayType = UHMessageTypeTwoButtons;
+            
+            UHMessageMetaButton * button1 = [[UHMessageMetaButton alloc] init];
+            UHMessageMetaButton * button2 = [[UHMessageMetaButton alloc] init];
+            
+            button1.click = UHMessageClickAction;
+            button2.click = UHMessageClickClose;
+            
+            NSDictionary * hookpoint = [data valueForKey:@"hookpoint"];
+            NSDictionary * meta = [hookpoint valueForKey:@"meta"];
+            if (meta) {
+                
+                if ([meta valueForKey:@"negativeButtonLabel"]) {
+                    button2.title = [meta valueForKey:@"negativeButtonLabel"];
+                }
+                if ([meta valueForKey:@"positiveButtonLabel"]) {
+                    button1.title = [meta valueForKey:@"positiveButtonLabel"];
+                }
+                if ([meta valueForKey:@"promptMessage"]) {
+                    uhmeta.body = [meta valueForKey:@"promptMessage"];
+                }
+                if ([meta valueForKey:@"payload"]) {
+                    button1.payload = [meta valueForKey:@"payload"];
+                }
+            }
+            
+            
+            uhmeta.button1 = button1;
+            uhmeta.button2 = button2;
+            
+            object = [[UHHookPointMessage alloc] initWithData:data];
+            ((UHHookPointMessage *)object).meta = uhmeta;
+            
         }
         else if ([type isEqualToString:[UHHookPointSurvey type]]) {
             object = [[UHHookPointSurvey alloc] initWithData:data];

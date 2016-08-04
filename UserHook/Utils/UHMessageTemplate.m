@@ -40,7 +40,8 @@ static UHMessageTemplate * _sharedInstance;
 }
 
 -(BOOL) hasTemplate:(NSString *)name {
-    return [self.cache objectForKey:name];
+    
+    return [self.cache objectForKey:name] != nil;
 }
 
 -(NSString *) renderTemplate:(UHMessageMeta *) meta {

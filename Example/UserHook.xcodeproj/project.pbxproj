@@ -30,7 +30,7 @@
 		223A74DF1D539BD1007C4ED1 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 223A74D01D539BD1007C4ED1 /* menu@2x.png */; };
 		223A74E01D539BD1007C4ED1 /* menu@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 223A74D11D539BD1007C4ED1 /* menu@3x.png */; };
 		223A74E41D539F20007C4ED1 /* userhook.plist in Resources */ = {isa = PBXBuildFile; fileRef = 223A74E31D539F20007C4ED1 /* userhook.plist */; };
-		223A74E61D53B986007C4ED1 /* CHANGELOG.md in Sources */ = {isa = PBXBuildFile; fileRef = 223A74E51D53B986007C4ED1 /* CHANGELOG.md */; };
+		223A74E81D53C217007C4ED1 /* CHANGELOG.md in Sources */ = {isa = PBXBuildFile; fileRef = 223A74E71D53C217007C4ED1 /* CHANGELOG.md */; };
 		3272D02B442A4A054D408EB3 /* Pods_UserHook_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FA07D7671BC06E0E91FE34 /* Pods_UserHook_Example.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
@@ -92,7 +92,7 @@
 		223A74D01D539BD1007C4ED1 /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
 		223A74D11D539BD1007C4ED1 /* menu@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@3x.png"; sourceTree = "<group>"; };
 		223A74E31D539F20007C4ED1 /* userhook.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = userhook.plist; sourceTree = "<group>"; };
-		223A74E51D53B986007C4ED1 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		223A74E71D53C217007C4ED1 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		2B38E7A2451AC36944FF900C /* Pods_UserHook_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserHook_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37FA07D7671BC06E0E91FE34 /* Pods_UserHook_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserHook_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* UserHook_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserHook_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -267,7 +267,7 @@
 		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				223A74E51D53B986007C4ED1 /* CHANGELOG.md */,
+				223A74E71D53C217007C4ED1 /* CHANGELOG.md */,
 				61DAA51DF273418487C2E084 /* UserHook.podspec */,
 				7BB515D68C0E38F072DAFCB9 /* README.md */,
 				0A8C9238D01A2C238E12BB17 /* LICENSE */,
@@ -498,7 +498,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				223A74D41D539BD1007C4ED1 /* MFSideMenuShadow.m in Sources */,
-				223A74E61D53B986007C4ED1 /* CHANGELOG.md in Sources */,
+				223A74E81D53C217007C4ED1 /* CHANGELOG.md in Sources */,
 				223A74BC1D539B73007C4ED1 /* CustomFieldViewController.m in Sources */,
 				223A74B51D539B73007C4ED1 /* AppDelegate.m in Sources */,
 				223A74D51D539BD1007C4ED1 /* UIViewController+MFSideMenuAdditions.m in Sources */,

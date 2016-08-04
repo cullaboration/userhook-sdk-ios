@@ -11,7 +11,7 @@
     "User Hook": "info@cullaboration.com"
   },
   "source": {
-    "git": "https://github.com/cullaboration/userhook-ios.git",
+    "git": "https://github.com/cullaboration/userhook-sdk-ios.git",
     "tag": "1.1.1"
   },
   "platforms": {
@@ -21,7 +21,7 @@
   "frameworks": "UIKit",
   "dependencies": {
     "JSONModel": [
-      "~> 1.3"
+
     ]
   }
 }
