@@ -1,0 +1,1156 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		025161463670E8D5208223DD6698DD87 /* UHMessageMeta.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C6DF6EBAA4B8D28D43D47DE91CE231 /* UHMessageMeta.m */; };
+		02CBF79C42D91D905A1BD93A4E83D403 /* UHHookPointRatingPrompt.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE762F96BF387615939A92DF39CEBAE /* UHHookPointRatingPrompt.m */; };
+		038C74E2AAE4FEB5BFB3905FDE3F70A0 /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 378AEACCB73A56874E59895469143734 /* JSONModel.m */; };
+		04752B18AECE50A7BAB7E0FC5045A72D /* JSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = AE5740DBCC140BB977C849736FC03ED8 /* JSONModelClassProperty.m */; };
+		0956430991227608EF86C94C3AB303E3 /* JSONModel+networking.h in Headers */ = {isa = PBXBuildFile; fileRef = 20DB64FB04FDC27111FD4F495B22D8DD /* JSONModel+networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0AD6D31BBC80AA532EF058FE25C4A8FA /* JSONHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A32165362CC427B5B1FFF114554520B7 /* JSONHTTPClient.m */; };
+		0F4B404DD7B808AE9E35A80043325D63 /* UserHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B350845B4A60EB4058EE4747B486DF /* UserHook.m */; };
+		109A51978993F31D8941823230766E1C /* UHTemplatesFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = F6702A18C6465A608921931B3D0DFC8E /* UHTemplatesFeed.m */; };
+		10EE204A29B369F74E812FF2F16FAAAE /* UHUser.h in Headers */ = {isa = PBXBuildFile; fileRef = 24F187CF4948346E952A880BC05C3FAE /* UHUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		16900D25F3C2BBCDC80C94234108F438 /* UHPagesFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 3502697932BD098FE61E7858CE32A7A2 /* UHPagesFeed.m */; };
+		1A6164EF873045B86C77C4CDFF3A7F56 /* Pods-UserHook_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC4F11425ED341461F626598882B8E2 /* Pods-UserHook_Tests-dummy.m */; };
+		1B12C580C3A762D77D03EE749E3F4F3B /* UHMessageMeta.h in Headers */ = {isa = PBXBuildFile; fileRef = 729251C2BB57AE3BA76B3115BFEEA7CE /* UHMessageMeta.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1BAD3230EBA1CF3E55FE9700140CF330 /* UHHostedPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BBE91833F77D616B27092DB52FED94B /* UHHostedPageViewController.m */; };
+		1DC0E7542AAF8D52BC77EAEC5A011030 /* UHFeed.h in Headers */ = {isa = PBXBuildFile; fileRef = F93EC49509E839E3712717B270D21CC2 /* UHFeed.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F9E5E1CB712FE1B0105998ACB22D130 /* UHHookPointAction.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B709D0950A318CD789942E0E8372C5 /* UHHookPointAction.m */; };
+		201B11899CBDD25C4DDC1D72B8ACC68E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B05266FE0AB404EAC61D0CE56372E35D /* UIKit.framework */; };
+		24967EB045BF1D059EB45978D0B2458F /* UHUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ADD915D1A67D99F00861777CCE4CEFB /* UHUser.m */; };
+		27EB289F17DF6841D8D4581C5ED5FBD1 /* JSONModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48FFF1693B823D0F4709BFE77CBDCE1C /* JSONModel.framework */; };
+		2B5B92CA8979BDFBE157012C2F5F2C8A /* UHHookPointMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 95F3BF023C5D3E4926E3341D4EA8A04C /* UHHookPointMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C89146532C1A0148AF9515A9114953A /* UHSessionFeed.h in Headers */ = {isa = PBXBuildFile; fileRef = D5090951AB87B17681FD568876F4A45F /* UHSessionFeed.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2FA7596BC0E58235214AC176F8FD3EDE /* UHHostedPageViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B1D6D9232975AB8A8347D7540900A5BB /* UHHostedPageViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3178E4F2672C3C6C112EA8F631C8C0FA /* UHOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2244C6CAD357833565931AA1ACE341AD /* UHOperation.m */; };
+		322F524E46868BF565CA1D5320533898 /* UHPushFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A9C09353943FD74906690B024DB3801 /* UHPushFeed.m */; };
+		33233FDB1E86D4BAC6746D56419A045B /* UHOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = F7C672592A76B58ED8BA8A57116D92ED /* UHOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3E3120E141D2D61A53E96EA898BB0066 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84855DFAF72471D9E303F4D2D7E84E41 /* Foundation.framework */; };
+		3FE5B8CC817119788800220C2D2B75B2 /* JSONModelError.m in Sources */ = {isa = PBXBuildFile; fileRef = E58A6B02B93052F05EC372B6DE9126AF /* JSONModelError.m */; };
+		42EB934CEC5218EC0B3C89BB769F1742 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84855DFAF72471D9E303F4D2D7E84E41 /* Foundation.framework */; };
+		4A0A3AC559DFB643B1046BA74CE8C25D /* UHHookPointAction.h in Headers */ = {isa = PBXBuildFile; fileRef = E211DFB38F5913A4E4043E96D6C2D9A8 /* UHHookPointAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F484780A2D2FEB2ACE51E9795DAD554 /* JSONModel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EEC114B5A4672F28A74535D4ADA7DC6C /* JSONModel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50599231E865FD94B68713337E398728 /* UHPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1316ED85B8FC5791896DE453F97F45DF /* UHPage.m */; };
+		5A486BBAE75BCF35AD6BA9C55A9EAD6F /* Pods-UserHook_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 91164ADBA29CC63636439D1942FA4020 /* Pods-UserHook_Example-dummy.m */; };
+		5EB92E7D051335EC3251AA30175D75F1 /* JSONModelClassProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 8206EA4814DDD3A11C0BB63AE7270690 /* JSONModelClassProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		614C917DBEE8D05C84F2DEC980444D58 /* UHFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = F90F1BD82C8176EF1379B8F6CC71FF58 /* UHFeed.m */; };
+		622E5A34DC00A100BF34682D4E8D5150 /* JSONModel+networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9C03CABA67BAA1A37B53F70091DE6C /* JSONModel+networking.m */; };
+		637183417614F3CB491BBCCAEDDE4978 /* JSONModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BEE895AC18B2EE10301E62D08160256 /* JSONModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		69DDDB53408848BF7989E5C85F45E0A5 /* UHSessionFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 2430E03C47E31205D1576FD6DEA913B1 /* UHSessionFeed.m */; };
+		6A60DAA228804C4353CE90C340FB7F44 /* JSONAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 9470BC1898AA41E5BC40D370BFCFA04D /* JSONAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6AC0790866CF0590235112D7BCD444D7 /* JSONModel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FCCC19D9B7BFB426C4B00C8EF689CC /* JSONModel-dummy.m */; };
+		6B9549ECE192823369C54F749F7438A4 /* UHHookPoint.h in Headers */ = {isa = PBXBuildFile; fileRef = F0128F0915B8AEA733E617D50735B5FD /* UHHookPoint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		700BEC9535BDE483F3F8EA54931E288B /* UHPushFeed.h in Headers */ = {isa = PBXBuildFile; fileRef = 11C25A7ACE66786FECCAD99FECC1F290 /* UHPushFeed.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		760757138C1944DFD969DE20BA37C34B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84855DFAF72471D9E303F4D2D7E84E41 /* Foundation.framework */; };
+		774F6EE5205716E9099FA619705B5077 /* UHHookPointMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 68155270EECB64D05D60DDBB805C02F6 /* UHHookPointMessage.m */; };
+		7FAC3166204F00D40314F1C50013EEFD /* UHApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = D8794C787DA9717764946A43F39DF442 /* UHApplication.m */; };
+		7FE12358DB4442E7272F38441F7D8722 /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = BF655EFC0BBA3745B664EAC47601F63A /* JSONValueTransformer.m */; };
+		861B76F7083A63CF4BF9B124B46CDC24 /* UHHookPointActionPrompt.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5A4EBE58008289A32C28E84AE7548B /* UHHookPointActionPrompt.m */; };
+		86357A0C70238F4854C2728EB26D061A /* UHWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EF247490BE787530B27E5048C3E1825 /* UHWebView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C14DC77ADF3A805361ACEEB36F40F22 /* UHDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8B77C7B2740E13F4F0805195F7BCBA /* UHDeviceInfo.m */; };
+		8C98D5979A22220990E0EE8192D8724C /* Pods-UserHook_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 17A595DD71DB515C47B21B9CA7695888 /* Pods-UserHook_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8D5A627D9DBA7B4668FA2502009EE05A /* UserHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A37BE9FDB344A1B115F51115489E7AA /* UserHook.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8EC8239269FD3FD6ECE910FF5F4BB3B3 /* UHHookPointRatingPrompt.h in Headers */ = {isa = PBXBuildFile; fileRef = A8074BC3A63A1F52AC8B1EDD7194A87A /* UHHookPointRatingPrompt.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8F0228D22AA9B15F2D6F6F6C1050682A /* UHPage.h in Headers */ = {isa = PBXBuildFile; fileRef = 0655D3989A5767271C1087EEC46E11D3 /* UHPage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8F434965584418E382761CDEC37FA775 /* JSONValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = A50B295E7412F2E4B792DC5834705FFD /* JSONValueTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		92640CB6046598A5DFC887AC0A7E73A6 /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = AECF8252D6CF289B801061729421BD23 /* JSONKeyMapper.m */; };
+		93135BF5A3E5A4CA8590236F7BAF9F07 /* UHMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B501EA48D06CE929D964A05941DBD6 /* UHMessageView.m */; };
+		944046F82890792345E029630DE7B36D /* Pods-UserHook_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E2458875D853C32424E39C5969FF7C84 /* Pods-UserHook_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9E5DC7E1189FB719BFC38F5079F1710C /* UHHookPointSurvey.h in Headers */ = {isa = PBXBuildFile; fileRef = C349C1DE2F12130AB3CFA86E336C92B8 /* UHHookPointSurvey.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A4E30A1B34C321532091C704BFA9F7E7 /* UserHook-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C347B169560F721A6A6E45320086210F /* UserHook-dummy.m */; };
+		A7328C639385B0D736E15AD9BD90E734 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84855DFAF72471D9E303F4D2D7E84E41 /* Foundation.framework */; };
+		A87FC18FB7E89D179E44AAE514E6FD5B /* UHPagesFeed.h in Headers */ = {isa = PBXBuildFile; fileRef = 522C58248507CFD3B5C18744099260D1 /* UHPagesFeed.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9D577BF6082EBD46B491BF4DBADB0CB /* UHWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE104E4C211DB9F1D2461C260E7A19B7 /* UHWebView.m */; };
+		ABC82891FBE253D0AA7BC816E4F2B5DF /* UHRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C163E1C3138C1DB6E59202900CF2EBF2 /* UHRequest.m */; };
+		B1BF9DA23B1B652FEE94BA6A11C18414 /* UHHookPointActionPrompt.h in Headers */ = {isa = PBXBuildFile; fileRef = 2395AFF9CB9389D237F70D8FD6FE5C1C /* UHHookPointActionPrompt.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B8980FB068E2D5858F0664A7A2B518A4 /* UHTemplatesFeed.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D54FE1510F0AAD0D799E889AC949E69 /* UHTemplatesFeed.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD81CC63C75EBC6834E9AB3C4A666815 /* JSONAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C4BDFC96318B7C6BCBA40D0CA2AFE1 /* JSONAPI.m */; };
+		C131E58FAD5779B5E1A8FDF1754C4033 /* UHHookPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = EC77C695CE365B2CDDD96F679D9AB483 /* UHHookPoint.m */; };
+		C2AD96EA71D810CA51BA3C36CE49515F /* UHPush.h in Headers */ = {isa = PBXBuildFile; fileRef = 76AF43195B6D0917A6B84BB8D9A325B5 /* UHPush.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5095F0399B179410861032F2C587BF0 /* UserHook-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EDBFA9531CA023CEEBB11E6FBBD0731E /* UserHook-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA9CD39BE80E0E7FDD51FA69C60270C0 /* JSONHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DAB0D29B784EF1FC8474642B4CD0B89 /* JSONHTTPClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D1A583AD7EF57BE38566443866BFD0E6 /* UHRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 436C44DB12B4B93DF9BB262EAE640669 /* UHRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D35931EE5FE4C424A0B3C203673DA8C0 /* UHHandlers.h in Headers */ = {isa = PBXBuildFile; fileRef = 68B7454FB35794DF007CEC1EC6DA22D3 /* UHHandlers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DEB0581461CF7CD8638C0DD13B223DDD /* JSONKeyMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = FC3E9A2B376786EF649B87645E08325C /* JSONKeyMapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E452BBD93CFE7F2AB36C5420FFC5D07C /* UHApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A19D968A49F748FF01FE5F2DB9C3835 /* UHApplication.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E77197A1DFF66DD13F9C71E06DE29F28 /* JSONModelError.h in Headers */ = {isa = PBXBuildFile; fileRef = EEC01C6096234B7E1BE5DA2E0C01BFBA /* JSONModelError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9DCC13957F9A453EA2B3170FF1CB82C /* UHDeviceInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = E4F5D1B1B5D1AA855F8F6C2B13FC33AF /* UHDeviceInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EAF5DF9513CED505849871531A29A14D /* UHMessageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EB2ED60265251A32C2298F9EA7216CA /* UHMessageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC149E10A991ED3B522644AD9EEABF95 /* JSONModelLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F9274F769FAD0C6150AAB14568D70DA /* JSONModelLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F4645F934ED55E7460E577ED5EC5BC8A /* UHMessageTemplate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CE9258ED5E1302CCF74C797CFA03EC7 /* UHMessageTemplate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F9087E57ED308815A91C6914393C67A1 /* UHHookPointSurvey.m in Sources */ = {isa = PBXBuildFile; fileRef = D6556B19577B22E8CF9FFF81DBAC350F /* UHHookPointSurvey.m */; };
+		F972D58E5BCB641B8C5A83877813BEFB /* UHPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FBC8A8CF5DCA6393219A82086D8BEB3 /* UHPush.m */; };
+		FFD116E6CB9B401A23806FFA69461AC4 /* UHMessageTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2A927DFA4095B7BAED924C38236B3D /* UHMessageTemplate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4F3B62DA39AC4A211750D2798FFE5D10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF21780C841830BE5AD3F34076925612;
+			remoteInfo = JSONModel;
+		};
+		6D4A513567B82BB6E77C7210B2FCB798 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF21780C841830BE5AD3F34076925612;
+			remoteInfo = JSONModel;
+		};
+		A5BFB4B7B53C5D5C14DB07832A268160 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 351484C0828FD777A08E311B1DBF2B40;
+			remoteInfo = UserHook;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02CCBEAE11CA46DA1F04265948278BD3 /* Pods-UserHook_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UserHook_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		047432C4815E5604A64B568C99AE10C1 /* UserHook.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UserHook.xcconfig; sourceTree = "<group>"; };
+		05FBE6C46AD7A25B7BAA1A70431179E0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0655D3989A5767271C1087EEC46E11D3 /* UHPage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UHPage.h; sourceTree = "<group>"; };
+		0B1F1412DB6E1CE774B74C1E215F90D7 /* JSONModel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = JSONModel.modulemap; sourceTree = "<group>"; };
+		0EB2ED60265251A32C2298F9EA7216CA /* UHMessageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UHMessageView.h; sourceTree = "<group>"; };
+		11C25A7ACE66786FECCAD99FECC1F290 /* UHPushFeed.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UHPushFeed.h; sourceTree = "<group>"; };
+		1316ED85B8FC5791896DE453F97F45DF /* UHPage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UHPage.m; sourceTree = "<group>"; };
+		17A595DD71DB515C47B21B9CA7695888 /* Pods-UserHook_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UserHook_Example-umbrella.h"; sourceTree = "<group>"; };
+		1A37BE9FDB344A1B115F51115489E7AA /* UserHook.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UserHook.h; sourceTree = "<group>"; };
+		1F9274F769FAD0C6150AAB14568D70DA /* JSONModelLib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModelLib.h; path = JSONModel/JSONModelLib.h; sourceTree = "<group>"; };
+		20DB64FB04FDC27111FD4F495B22D8DD /* JSONModel+networking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "JSONModel+networking.h"; path = "JSONModel/JSONModelNetworking/JSONModel+networking.h"; sourceTree = "<group>"; };
+		2244C6CAD357833565931AA1ACE341AD /* UHOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UHOperation.m; sourceTree = "<group>"; };
+		2395AFF9CB9389D237F70D8FD6FE5C1C /* UHHookPointActionPrompt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UHHookPointActionPrompt.h; sourceTree = "<group>"; };
+		2430E03C47E31205D1576FD6DEA913B1 /* UHSessionFeed.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UHSessionFeed.m; sourceTree = "<group>"; };
+		24F187CF4948346E952A880BC05C3FAE /* UHUser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UHUser.h; sourceTree = "<group>"; };
+		277795B36F5FE5A988C8729B33C0D8B4 /* Pods-UserHook_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-UserHook_Example.modulemap"; sourceTree = "<group>"; };
+		2BE7A028315D5C72C9F364699141963A /* Pods-UserHook_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UserHook_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		3502697932BD098FE61E7858CE32A7A2 /* UHPagesFeed.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UHPagesFeed.m; sourceTree = "<group>"; };
+		3710DE4ACB673D4C15CC0E60D6BCB1E7 /* Pods-UserHook_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UserHook_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		378AEACCB73A56874E59895469143734 /* JSONModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONModel.m; path = JSONModel/JSONModel/JSONModel.m; sourceTree = "<group>"; };
+		379ADEA91E969DD255EE94A39C2C8B35 /* Pods_UserHook_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserHook_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B3FD1E89DBAE32412336A94391CF7B6 /* Pods-UserHook_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UserHook_Example-frameworks.sh"; sourceTree = "<group>"; };
+		3EC03A1EED3CB4075FC0567024B5FB3D /* Pods-UserHook_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UserHook_Example.release.xcconfig"; sourceTree = "<group>"; };
+		3F615E35EEEB4A769B8B3BA97643982C /* Pods-UserHook_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UserHook_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		3FBC8A8CF5DCA6393219A82086D8BEB3 /* UHPush.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UHPush.m; sourceTree = "<group>"; };
+		428F2E314D79E2DC2DF82ABF54EAD429 /* JSONModel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JSONModel.xcconfig; sourceTree = "<group>"; };
+		436C44DB12B4B93DF9BB262EAE640669 /* UHRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UHRequest.h; sourceTree = "<group>"; };
+		43C6DF6EBAA4B8D28D43D47DE91CE231 /* UHMessageMeta.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UHMessageMeta.m; sourceTree = "<group>"; };
+		47E82B765EB26D8C64A3E8D6282ECC4A /* JSONModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JSONModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		48FFF1693B823D0F4709BFE77CBDCE1C /* JSONModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JSONModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CE9258ED5E1302CCF74C797CFA03EC7 /* UHMessageTemplate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UHMessageTemplate.h; sourceTree = "<group>"; };
+		508B18BE24FA1F4708D8A4B90A4A49E3 /* Pods-UserHook_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UserHook_Tests-resources.sh"; sourceTree = "<group>"; };
+		50B350845B4A60EB4058EE4747B486DF /* UserHook.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UserHook.m; sourceTree = "<group>"; };
+		520EBEDE9267C6C21C9F681776205574 /* Pods-UserHook_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UserHook_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		522C58248507CFD3B5C18744099260D1 /* UHPagesFeed.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UHPagesFeed.h; sourceTree = "<group>"; };
+		56B501EA48D06CE929D964A05941DBD6 /* UHMessageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UHMessageView.m; sourceTree = "<group>"; };
+		5BBE91833F77D616B27092DB52FED94B /* UHHostedPageViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UHHostedPageViewController.m; sourceTree = "<group>"; };
+		5DAB0D29B784EF1FC8474642B4CD0B89 /* JSONHTTPClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONHTTPClient.h; path = JSONModel/JSONModelNetworking/JSONHTTPClient.h; sourceTree = "<group>"; };
+		5EF247490BE787530B27E5048C3E1825 /* UHWebView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UHWebView.h; sourceTree = "<group>"; };
+		68155270EECB64D05D60DDBB805C02F6 /* UHHookPointMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UHHookPointMessage.m; sourceTree = "<group>"; };
+		68B7454FB35794DF007CEC1EC6DA22D3 /* UHHandlers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UHHandlers.h; sourceTree = "<group>"; };
+		6A19D968A49F748FF01FE5F2DB9C3835 /* UHApplication.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UHApplication.h; sourceTree = "<group>"; };
+		6FCE6A99594DFF425AAD70AF7CF719D1 /* Pods-UserHook_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UserHook_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		729251C2BB57AE3BA76B3115BFEEA7CE /* UHMessageMeta.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UHMessageMeta.h; sourceTree = "<group>"; };
+		750660A83D5648D35AF15F13D94CCA43 /* Pods-UserHook_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-UserHook_Tests.modulemap"; sourceTree = "<group>"; };
+		76AF43195B6D0917A6B84BB8D9A325B5 /* UHPush.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UHPush.h; sourceTree = "<group>"; };
+		7ADD915D1A67D99F00861777CCE4CEFB /* UHUser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UHUser.m; sourceTree = "<group>"; };
+		8206EA4814DDD3A11C0BB63AE7270690 /* JSONModelClassProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModelClassProperty.h; path = JSONModel/JSONModel/JSONModelClassProperty.h; sourceTree = "<group>"; };
+		844EE3DFA58BC4A920E478EE4017CC32 /* JSONModel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JSONModel-prefix.pch"; sourceTree = "<group>"; };
+		84855DFAF72471D9E303F4D2D7E84E41 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		85EDEA0DE65213BCA5D14DCF0374B9DF /* UserHook.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = UserHook.modulemap; sourceTree = "<group>"; };
+		88841F12AADF9328DA75D9305D1599A3 /* UserHook-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UserHook-prefix.pch"; sourceTree = "<group>"; };
+		8A9C09353943FD74906690B024DB3801 /* UHPushFeed.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UHPushFeed.m; sourceTree = "<group>"; };
+		8D54FE1510F0AAD0D799E889AC949E69 /* UHTemplatesFeed.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UHTemplatesFeed.h; sourceTree = "<group>"; };
+		91164ADBA29CC63636439D1942FA4020 /* Pods-UserHook_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UserHook_Example-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9470BC1898AA41E5BC40D370BFCFA04D /* JSONAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONAPI.h; path = JSONModel/JSONModelNetworking/JSONAPI.h; sourceTree = "<group>"; };
+		95F3BF023C5D3E4926E3341D4EA8A04C /* UHHookPointMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UHHookPointMessage.h; sourceTree = "<group>"; };
+		99B5E8F9002B3E0CE9A6185A57C7FC14 /* Pods-UserHook_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UserHook_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		9A9C03CABA67BAA1A37B53F70091DE6C /* JSONModel+networking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "JSONModel+networking.m"; path = "JSONModel/JSONModelNetworking/JSONModel+networking.m"; sourceTree = "<group>"; };
+		9BEE895AC18B2EE10301E62D08160256 /* JSONModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModel.h; path = JSONModel/JSONModel/JSONModel.h; sourceTree = "<group>"; };
+		9F2A927DFA4095B7BAED924C38236B3D /* UHMessageTemplate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UHMessageTemplate.m; sourceTree = "<group>"; };
+		A2FCCC19D9B7BFB426C4B00C8EF689CC /* JSONModel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JSONModel-dummy.m"; sourceTree = "<group>"; };
+		A32165362CC427B5B1FFF114554520B7 /* JSONHTTPClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONHTTPClient.m; path = JSONModel/JSONModelNetworking/JSONHTTPClient.m; sourceTree = "<group>"; };
+		A50B295E7412F2E4B792DC5834705FFD /* JSONValueTransformer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONValueTransformer.h; path = JSONModel/JSONModelTransformations/JSONValueTransformer.h; sourceTree = "<group>"; };
+		A8074BC3A63A1F52AC8B1EDD7194A87A /* UHHookPointRatingPrompt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UHHookPointRatingPrompt.h; sourceTree = "<group>"; };
+		ADEF8A7F274958D8E905D9D5A07394A5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE5740DBCC140BB977C849736FC03ED8 /* JSONModelClassProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONModelClassProperty.m; path = JSONModel/JSONModel/JSONModelClassProperty.m; sourceTree = "<group>"; };
+		AECF8252D6CF289B801061729421BD23 /* JSONKeyMapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONKeyMapper.m; path = JSONModel/JSONModelTransformations/JSONKeyMapper.m; sourceTree = "<group>"; };
+		B05266FE0AB404EAC61D0CE56372E35D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		B1D6D9232975AB8A8347D7540900A5BB /* UHHostedPageViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UHHostedPageViewController.h; sourceTree = "<group>"; };
+		B8A2432253F7612D0CA4ED15E13241F5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF655EFC0BBA3745B664EAC47601F63A /* JSONValueTransformer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONValueTransformer.m; path = JSONModel/JSONModelTransformations/JSONValueTransformer.m; sourceTree = "<group>"; };
+		C163E1C3138C1DB6E59202900CF2EBF2 /* UHRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UHRequest.m; sourceTree = "<group>"; };
+		C2B709D0950A318CD789942E0E8372C5 /* UHHookPointAction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UHHookPointAction.m; sourceTree = "<group>"; };
+		C347B169560F721A6A6E45320086210F /* UserHook-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UserHook-dummy.m"; sourceTree = "<group>"; };
+		C349C1DE2F12130AB3CFA86E336C92B8 /* UHHookPointSurvey.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UHHookPointSurvey.h; sourceTree = "<group>"; };
+		CBE762F96BF387615939A92DF39CEBAE /* UHHookPointRatingPrompt.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UHHookPointRatingPrompt.m; sourceTree = "<group>"; };
+		CDC4F11425ED341461F626598882B8E2 /* Pods-UserHook_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UserHook_Tests-dummy.m"; sourceTree = "<group>"; };
+		D1C4BDFC96318B7C6BCBA40D0CA2AFE1 /* JSONAPI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONAPI.m; path = JSONModel/JSONModelNetworking/JSONAPI.m; sourceTree = "<group>"; };
+		D5090951AB87B17681FD568876F4A45F /* UHSessionFeed.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UHSessionFeed.h; sourceTree = "<group>"; };
+		D6556B19577B22E8CF9FFF81DBAC350F /* UHHookPointSurvey.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UHHookPointSurvey.m; sourceTree = "<group>"; };
+		D845442A7B0369C12209203FD794704A /* Pods_UserHook_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserHook_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8794C787DA9717764946A43F39DF442 /* UHApplication.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UHApplication.m; sourceTree = "<group>"; };
+		DA27CF64EE60EDB7310B2BCAE398A64B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE104E4C211DB9F1D2461C260E7A19B7 /* UHWebView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UHWebView.m; sourceTree = "<group>"; };
+		E211DFB38F5913A4E4043E96D6C2D9A8 /* UHHookPointAction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UHHookPointAction.h; sourceTree = "<group>"; };
+		E213FC17E3AADF50BA1C6C0DAFFFC503 /* Pods-UserHook_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UserHook_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		E2458875D853C32424E39C5969FF7C84 /* Pods-UserHook_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UserHook_Tests-umbrella.h"; sourceTree = "<group>"; };
+		E4F5D1B1B5D1AA855F8F6C2B13FC33AF /* UHDeviceInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UHDeviceInfo.h; sourceTree = "<group>"; };
+		E58A6B02B93052F05EC372B6DE9126AF /* JSONModelError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONModelError.m; path = JSONModel/JSONModel/JSONModelError.m; sourceTree = "<group>"; };
+		EC77C695CE365B2CDDD96F679D9AB483 /* UHHookPoint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UHHookPoint.m; sourceTree = "<group>"; };
+		EDBFA9531CA023CEEBB11E6FBBD0731E /* UserHook-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UserHook-umbrella.h"; sourceTree = "<group>"; };
+		EEC01C6096234B7E1BE5DA2E0C01BFBA /* JSONModelError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModelError.h; path = JSONModel/JSONModel/JSONModelError.h; sourceTree = "<group>"; };
+		EEC114B5A4672F28A74535D4ADA7DC6C /* JSONModel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JSONModel-umbrella.h"; sourceTree = "<group>"; };
+		F0128F0915B8AEA733E617D50735B5FD /* UHHookPoint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UHHookPoint.h; sourceTree = "<group>"; };
+		F63F352ED2147D083F2AA3CB2B20CF55 /* Pods-UserHook_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UserHook_Example-resources.sh"; sourceTree = "<group>"; };
+		F6702A18C6465A608921931B3D0DFC8E /* UHTemplatesFeed.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UHTemplatesFeed.m; sourceTree = "<group>"; };
+		F67403A4975E32C706125927571C7FCA /* UserHook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UserHook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7C672592A76B58ED8BA8A57116D92ED /* UHOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UHOperation.h; sourceTree = "<group>"; };
+		F90F1BD82C8176EF1379B8F6CC71FF58 /* UHFeed.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UHFeed.m; sourceTree = "<group>"; };
+		F93EC49509E839E3712717B270D21CC2 /* UHFeed.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UHFeed.h; sourceTree = "<group>"; };
+		FC3E9A2B376786EF649B87645E08325C /* JSONKeyMapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONKeyMapper.h; path = JSONModel/JSONModelTransformations/JSONKeyMapper.h; sourceTree = "<group>"; };
+		FD5A4EBE58008289A32C28E84AE7548B /* UHHookPointActionPrompt.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UHHookPointActionPrompt.m; sourceTree = "<group>"; };
+		FE8B77C7B2740E13F4F0805195F7BCBA /* UHDeviceInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UHDeviceInfo.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0D8DBC027A2A64F838C11DE5E03341F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E3120E141D2D61A53E96EA898BB0066 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A7323CB900C4A8C405F3C92627A820A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				760757138C1944DFD969DE20BA37C34B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FBD390C5CC3A1A4384C033729F70A05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42EB934CEC5218EC0B3C89BB769F1742 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B800CC51C0263205379279F7FCD2B3E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7328C639385B0D736E15AD9BD90E734 /* Foundation.framework in Frameworks */,
+				27EB289F17DF6841D8D4581C5ED5FBD1 /* JSONModel.framework in Frameworks */,
+				201B11899CBDD25C4DDC1D72B8ACC68E /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		009AE415E43203C9094783F910B06B1D /* Hookpoints */ = {
+			isa = PBXGroup;
+			children = (
+				F0128F0915B8AEA733E617D50735B5FD /* UHHookPoint.h */,
+				EC77C695CE365B2CDDD96F679D9AB483 /* UHHookPoint.m */,
+				E211DFB38F5913A4E4043E96D6C2D9A8 /* UHHookPointAction.h */,
+				C2B709D0950A318CD789942E0E8372C5 /* UHHookPointAction.m */,
+				2395AFF9CB9389D237F70D8FD6FE5C1C /* UHHookPointActionPrompt.h */,
+				FD5A4EBE58008289A32C28E84AE7548B /* UHHookPointActionPrompt.m */,
+				95F3BF023C5D3E4926E3341D4EA8A04C /* UHHookPointMessage.h */,
+				68155270EECB64D05D60DDBB805C02F6 /* UHHookPointMessage.m */,
+				A8074BC3A63A1F52AC8B1EDD7194A87A /* UHHookPointRatingPrompt.h */,
+				CBE762F96BF387615939A92DF39CEBAE /* UHHookPointRatingPrompt.m */,
+				C349C1DE2F12130AB3CFA86E336C92B8 /* UHHookPointSurvey.h */,
+				D6556B19577B22E8CF9FFF81DBAC350F /* UHHookPointSurvey.m */,
+			);
+			path = Hookpoints;
+			sourceTree = "<group>";
+		};
+		1672D47FCD63AA6DBFD5220B4C4050F7 /* UserHook */ = {
+			isa = PBXGroup;
+			children = (
+				1A37BE9FDB344A1B115F51115489E7AA /* UserHook.h */,
+				50B350845B4A60EB4058EE4747B486DF /* UserHook.m */,
+				009AE415E43203C9094783F910B06B1D /* Hookpoints */,
+				F3F14F0C9CDE5D549FF33A38C8A2C1A0 /* Models */,
+				524837EEFF6036145253691126E6FAE5 /* Utils */,
+				F39A934E65994EEF3597B97856480EA0 /* Views */,
+			);
+			path = UserHook;
+			sourceTree = "<group>";
+		};
+		168DC55643B17BFF70CEA1F34EED389C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				47E82B765EB26D8C64A3E8D6282ECC4A /* JSONModel.framework */,
+				D845442A7B0369C12209203FD794704A /* Pods_UserHook_Example.framework */,
+				379ADEA91E969DD255EE94A39C2C8B35 /* Pods_UserHook_Tests.framework */,
+				F67403A4975E32C706125927571C7FCA /* UserHook.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4561949C0A3C49CD1640B4B52855ECBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				48FFF1693B823D0F4709BFE77CBDCE1C /* JSONModel.framework */,
+				47B844F75AC049F46CDB8D906A36AEA0 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		47B844F75AC049F46CDB8D906A36AEA0 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				84855DFAF72471D9E303F4D2D7E84E41 /* Foundation.framework */,
+				B05266FE0AB404EAC61D0CE56372E35D /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		524837EEFF6036145253691126E6FAE5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E4F5D1B1B5D1AA855F8F6C2B13FC33AF /* UHDeviceInfo.h */,
+				FE8B77C7B2740E13F4F0805195F7BCBA /* UHDeviceInfo.m */,
+				68B7454FB35794DF007CEC1EC6DA22D3 /* UHHandlers.h */,
+				4CE9258ED5E1302CCF74C797CFA03EC7 /* UHMessageTemplate.h */,
+				9F2A927DFA4095B7BAED924C38236B3D /* UHMessageTemplate.m */,
+				F7C672592A76B58ED8BA8A57116D92ED /* UHOperation.h */,
+				2244C6CAD357833565931AA1ACE341AD /* UHOperation.m */,
+				76AF43195B6D0917A6B84BB8D9A325B5 /* UHPush.h */,
+				3FBC8A8CF5DCA6393219A82086D8BEB3 /* UHPush.m */,
+				436C44DB12B4B93DF9BB262EAE640669 /* UHRequest.h */,
+				C163E1C3138C1DB6E59202900CF2EBF2 /* UHRequest.m */,
+				24F187CF4948346E952A880BC05C3FAE /* UHUser.h */,
+				7ADD915D1A67D99F00861777CCE4CEFB /* UHUser.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		592A0CCD060065FAB43CF3B9A34B8470 /* Pods-UserHook_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				05FBE6C46AD7A25B7BAA1A70431179E0 /* Info.plist */,
+				750660A83D5648D35AF15F13D94CCA43 /* Pods-UserHook_Tests.modulemap */,
+				6FCE6A99594DFF425AAD70AF7CF719D1 /* Pods-UserHook_Tests-acknowledgements.markdown */,
+				99B5E8F9002B3E0CE9A6185A57C7FC14 /* Pods-UserHook_Tests-acknowledgements.plist */,
+				CDC4F11425ED341461F626598882B8E2 /* Pods-UserHook_Tests-dummy.m */,
+				2BE7A028315D5C72C9F364699141963A /* Pods-UserHook_Tests-frameworks.sh */,
+				508B18BE24FA1F4708D8A4B90A4A49E3 /* Pods-UserHook_Tests-resources.sh */,
+				E2458875D853C32424E39C5969FF7C84 /* Pods-UserHook_Tests-umbrella.h */,
+				520EBEDE9267C6C21C9F681776205574 /* Pods-UserHook_Tests.debug.xcconfig */,
+				3F615E35EEEB4A769B8B3BA97643982C /* Pods-UserHook_Tests.release.xcconfig */,
+			);
+			name = "Pods-UserHook_Tests";
+			path = "Target Support Files/Pods-UserHook_Tests";
+			sourceTree = "<group>";
+		};
+		76CFA9363DAF38C2077D2159D8EA8DD1 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7BF669C60BFB71D39382D8FB046B0556 /* UserHook */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		7BF669C60BFB71D39382D8FB046B0556 /* UserHook */ = {
+			isa = PBXGroup;
+			children = (
+				D57432C6969E19F8F91962CCB58167A4 /* Support Files */,
+				1672D47FCD63AA6DBFD5220B4C4050F7 /* UserHook */,
+			);
+			name = UserHook;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				76CFA9363DAF38C2077D2159D8EA8DD1 /* Development Pods */,
+				4561949C0A3C49CD1640B4B52855ECBA /* Frameworks */,
+				E90606205BE2F0EAA285C9306DD5B1BD /* Pods */,
+				168DC55643B17BFF70CEA1F34EED389C /* Products */,
+				D1DA26438E74A2E1F72A3426642B9CCD /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		A2D826D2B5450F47BDAE6975F2C1B9ED /* Pods-UserHook_Example */ = {
+			isa = PBXGroup;
+			children = (
+				DA27CF64EE60EDB7310B2BCAE398A64B /* Info.plist */,
+				277795B36F5FE5A988C8729B33C0D8B4 /* Pods-UserHook_Example.modulemap */,
+				02CCBEAE11CA46DA1F04265948278BD3 /* Pods-UserHook_Example-acknowledgements.markdown */,
+				3710DE4ACB673D4C15CC0E60D6BCB1E7 /* Pods-UserHook_Example-acknowledgements.plist */,
+				91164ADBA29CC63636439D1942FA4020 /* Pods-UserHook_Example-dummy.m */,
+				3B3FD1E89DBAE32412336A94391CF7B6 /* Pods-UserHook_Example-frameworks.sh */,
+				F63F352ED2147D083F2AA3CB2B20CF55 /* Pods-UserHook_Example-resources.sh */,
+				17A595DD71DB515C47B21B9CA7695888 /* Pods-UserHook_Example-umbrella.h */,
+				E213FC17E3AADF50BA1C6C0DAFFFC503 /* Pods-UserHook_Example.debug.xcconfig */,
+				3EC03A1EED3CB4075FC0567024B5FB3D /* Pods-UserHook_Example.release.xcconfig */,
+			);
+			name = "Pods-UserHook_Example";
+			path = "Target Support Files/Pods-UserHook_Example";
+			sourceTree = "<group>";
+		};
+		AAEC248A8E670C89A9FC23873EEA224B /* JSONModel */ = {
+			isa = PBXGroup;
+			children = (
+				9470BC1898AA41E5BC40D370BFCFA04D /* JSONAPI.h */,
+				D1C4BDFC96318B7C6BCBA40D0CA2AFE1 /* JSONAPI.m */,
+				5DAB0D29B784EF1FC8474642B4CD0B89 /* JSONHTTPClient.h */,
+				A32165362CC427B5B1FFF114554520B7 /* JSONHTTPClient.m */,
+				FC3E9A2B376786EF649B87645E08325C /* JSONKeyMapper.h */,
+				AECF8252D6CF289B801061729421BD23 /* JSONKeyMapper.m */,
+				9BEE895AC18B2EE10301E62D08160256 /* JSONModel.h */,
+				378AEACCB73A56874E59895469143734 /* JSONModel.m */,
+				20DB64FB04FDC27111FD4F495B22D8DD /* JSONModel+networking.h */,
+				9A9C03CABA67BAA1A37B53F70091DE6C /* JSONModel+networking.m */,
+				8206EA4814DDD3A11C0BB63AE7270690 /* JSONModelClassProperty.h */,
+				AE5740DBCC140BB977C849736FC03ED8 /* JSONModelClassProperty.m */,
+				EEC01C6096234B7E1BE5DA2E0C01BFBA /* JSONModelError.h */,
+				E58A6B02B93052F05EC372B6DE9126AF /* JSONModelError.m */,
+				1F9274F769FAD0C6150AAB14568D70DA /* JSONModelLib.h */,
+				A50B295E7412F2E4B792DC5834705FFD /* JSONValueTransformer.h */,
+				BF655EFC0BBA3745B664EAC47601F63A /* JSONValueTransformer.m */,
+				C12EA950A2275AD9E4C9E4EB3C3AC066 /* Support Files */,
+			);
+			path = JSONModel;
+			sourceTree = "<group>";
+		};
+		C12EA950A2275AD9E4C9E4EB3C3AC066 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				ADEF8A7F274958D8E905D9D5A07394A5 /* Info.plist */,
+				0B1F1412DB6E1CE774B74C1E215F90D7 /* JSONModel.modulemap */,
+				428F2E314D79E2DC2DF82ABF54EAD429 /* JSONModel.xcconfig */,
+				A2FCCC19D9B7BFB426C4B00C8EF689CC /* JSONModel-dummy.m */,
+				844EE3DFA58BC4A920E478EE4017CC32 /* JSONModel-prefix.pch */,
+				EEC114B5A4672F28A74535D4ADA7DC6C /* JSONModel-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/JSONModel";
+			sourceTree = "<group>";
+		};
+		D1DA26438E74A2E1F72A3426642B9CCD /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A2D826D2B5450F47BDAE6975F2C1B9ED /* Pods-UserHook_Example */,
+				592A0CCD060065FAB43CF3B9A34B8470 /* Pods-UserHook_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		D57432C6969E19F8F91962CCB58167A4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B8A2432253F7612D0CA4ED15E13241F5 /* Info.plist */,
+				85EDEA0DE65213BCA5D14DCF0374B9DF /* UserHook.modulemap */,
+				047432C4815E5604A64B568C99AE10C1 /* UserHook.xcconfig */,
+				C347B169560F721A6A6E45320086210F /* UserHook-dummy.m */,
+				88841F12AADF9328DA75D9305D1599A3 /* UserHook-prefix.pch */,
+				EDBFA9531CA023CEEBB11E6FBBD0731E /* UserHook-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/UserHook";
+			sourceTree = "<group>";
+		};
+		E90606205BE2F0EAA285C9306DD5B1BD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AAEC248A8E670C89A9FC23873EEA224B /* JSONModel */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F39A934E65994EEF3597B97856480EA0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B1D6D9232975AB8A8347D7540900A5BB /* UHHostedPageViewController.h */,
+				5BBE91833F77D616B27092DB52FED94B /* UHHostedPageViewController.m */,
+				0EB2ED60265251A32C2298F9EA7216CA /* UHMessageView.h */,
+				56B501EA48D06CE929D964A05941DBD6 /* UHMessageView.m */,
+				5EF247490BE787530B27E5048C3E1825 /* UHWebView.h */,
+				DE104E4C211DB9F1D2461C260E7A19B7 /* UHWebView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F3F14F0C9CDE5D549FF33A38C8A2C1A0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6A19D968A49F748FF01FE5F2DB9C3835 /* UHApplication.h */,
+				D8794C787DA9717764946A43F39DF442 /* UHApplication.m */,
+				F93EC49509E839E3712717B270D21CC2 /* UHFeed.h */,
+				F90F1BD82C8176EF1379B8F6CC71FF58 /* UHFeed.m */,
+				729251C2BB57AE3BA76B3115BFEEA7CE /* UHMessageMeta.h */,
+				43C6DF6EBAA4B8D28D43D47DE91CE231 /* UHMessageMeta.m */,
+				0655D3989A5767271C1087EEC46E11D3 /* UHPage.h */,
+				1316ED85B8FC5791896DE453F97F45DF /* UHPage.m */,
+				522C58248507CFD3B5C18744099260D1 /* UHPagesFeed.h */,
+				3502697932BD098FE61E7858CE32A7A2 /* UHPagesFeed.m */,
+				11C25A7ACE66786FECCAD99FECC1F290 /* UHPushFeed.h */,
+				8A9C09353943FD74906690B024DB3801 /* UHPushFeed.m */,
+				D5090951AB87B17681FD568876F4A45F /* UHSessionFeed.h */,
+				2430E03C47E31205D1576FD6DEA913B1 /* UHSessionFeed.m */,
+				8D54FE1510F0AAD0D799E889AC949E69 /* UHTemplatesFeed.h */,
+				F6702A18C6465A608921931B3D0DFC8E /* UHTemplatesFeed.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		6B00CF64C85006D00DB8E9F4D111E080 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				944046F82890792345E029630DE7B36D /* Pods-UserHook_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAD9405A7A285FD80337A46C669FE60B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E452BBD93CFE7F2AB36C5420FFC5D07C /* UHApplication.h in Headers */,
+				E9DCC13957F9A453EA2B3170FF1CB82C /* UHDeviceInfo.h in Headers */,
+				1DC0E7542AAF8D52BC77EAEC5A011030 /* UHFeed.h in Headers */,
+				D35931EE5FE4C424A0B3C203673DA8C0 /* UHHandlers.h in Headers */,
+				6B9549ECE192823369C54F749F7438A4 /* UHHookPoint.h in Headers */,
+				4A0A3AC559DFB643B1046BA74CE8C25D /* UHHookPointAction.h in Headers */,
+				B1BF9DA23B1B652FEE94BA6A11C18414 /* UHHookPointActionPrompt.h in Headers */,
+				2B5B92CA8979BDFBE157012C2F5F2C8A /* UHHookPointMessage.h in Headers */,
+				8EC8239269FD3FD6ECE910FF5F4BB3B3 /* UHHookPointRatingPrompt.h in Headers */,
+				9E5DC7E1189FB719BFC38F5079F1710C /* UHHookPointSurvey.h in Headers */,
+				2FA7596BC0E58235214AC176F8FD3EDE /* UHHostedPageViewController.h in Headers */,
+				1B12C580C3A762D77D03EE749E3F4F3B /* UHMessageMeta.h in Headers */,
+				F4645F934ED55E7460E577ED5EC5BC8A /* UHMessageTemplate.h in Headers */,
+				EAF5DF9513CED505849871531A29A14D /* UHMessageView.h in Headers */,
+				33233FDB1E86D4BAC6746D56419A045B /* UHOperation.h in Headers */,
+				8F0228D22AA9B15F2D6F6F6C1050682A /* UHPage.h in Headers */,
+				A87FC18FB7E89D179E44AAE514E6FD5B /* UHPagesFeed.h in Headers */,
+				C2AD96EA71D810CA51BA3C36CE49515F /* UHPush.h in Headers */,
+				700BEC9535BDE483F3F8EA54931E288B /* UHPushFeed.h in Headers */,
+				D1A583AD7EF57BE38566443866BFD0E6 /* UHRequest.h in Headers */,
+				2C89146532C1A0148AF9515A9114953A /* UHSessionFeed.h in Headers */,
+				B8980FB068E2D5858F0664A7A2B518A4 /* UHTemplatesFeed.h in Headers */,
+				10EE204A29B369F74E812FF2F16FAAAE /* UHUser.h in Headers */,
+				86357A0C70238F4854C2728EB26D061A /* UHWebView.h in Headers */,
+				C5095F0399B179410861032F2C587BF0 /* UserHook-umbrella.h in Headers */,
+				8D5A627D9DBA7B4668FA2502009EE05A /* UserHook.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C00683FD4CF09551BDE6CC46D0934FEA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A60DAA228804C4353CE90C340FB7F44 /* JSONAPI.h in Headers */,
+				CA9CD39BE80E0E7FDD51FA69C60270C0 /* JSONHTTPClient.h in Headers */,
+				DEB0581461CF7CD8638C0DD13B223DDD /* JSONKeyMapper.h in Headers */,
+				0956430991227608EF86C94C3AB303E3 /* JSONModel+networking.h in Headers */,
+				4F484780A2D2FEB2ACE51E9795DAD554 /* JSONModel-umbrella.h in Headers */,
+				637183417614F3CB491BBCCAEDDE4978 /* JSONModel.h in Headers */,
+				5EB92E7D051335EC3251AA30175D75F1 /* JSONModelClassProperty.h in Headers */,
+				E77197A1DFF66DD13F9C71E06DE29F28 /* JSONModelError.h in Headers */,
+				EC149E10A991ED3B522644AD9EEABF95 /* JSONModelLib.h in Headers */,
+				8F434965584418E382761CDEC37FA775 /* JSONValueTransformer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB8207420F03FC29488A832C303DD416 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C98D5979A22220990E0EE8192D8724C /* Pods-UserHook_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		351484C0828FD777A08E311B1DBF2B40 /* UserHook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7C8A14E02AC9B19283AA966CF9A4EC95 /* Build configuration list for PBXNativeTarget "UserHook" */;
+			buildPhases = (
+				A9D6ED7FA16F95CFE469C4DDFD717F42 /* Sources */,
+				B800CC51C0263205379279F7FCD2B3E2 /* Frameworks */,
+				BAD9405A7A285FD80337A46C669FE60B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				29880BCD096A500B99CB0B0224409A1F /* PBXTargetDependency */,
+			);
+			name = UserHook;
+			productName = UserHook;
+			productReference = F67403A4975E32C706125927571C7FCA /* UserHook.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AF21780C841830BE5AD3F34076925612 /* JSONModel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA4FF01377840F6F85F8671B6E0F48AE /* Build configuration list for PBXNativeTarget "JSONModel" */;
+			buildPhases = (
+				5B9370A5EEFE985A5D6A684DB17E9D58 /* Sources */,
+				9FBD390C5CC3A1A4384C033729F70A05 /* Frameworks */,
+				C00683FD4CF09551BDE6CC46D0934FEA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JSONModel;
+			productName = JSONModel;
+			productReference = 47E82B765EB26D8C64A3E8D6282ECC4A /* JSONModel.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CB5405FF9D6B539F54309FA7D4D791CA /* Pods-UserHook_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC38A268A4D00E11385E4779762FB5D4 /* Build configuration list for PBXNativeTarget "Pods-UserHook_Example" */;
+			buildPhases = (
+				974F59BF30A4ED92041A3745B5143DD1 /* Sources */,
+				8A7323CB900C4A8C405F3C92627A820A /* Frameworks */,
+				CB8207420F03FC29488A832C303DD416 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF16613FA02A6909A63FAE672494D642 /* PBXTargetDependency */,
+				00CB3B49D01DF774231B4442DB3EA9AE /* PBXTargetDependency */,
+			);
+			name = "Pods-UserHook_Example";
+			productName = "Pods-UserHook_Example";
+			productReference = D845442A7B0369C12209203FD794704A /* Pods_UserHook_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DACBD68BE6FA77C21F093D416334B4A8 /* Pods-UserHook_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35C17D96B1F5867BC90904917EC55DFA /* Build configuration list for PBXNativeTarget "Pods-UserHook_Tests" */;
+			buildPhases = (
+				F7B84C7D90AEBFFE54A9DEC009B156D7 /* Sources */,
+				0D8DBC027A2A64F838C11DE5E03341F3 /* Frameworks */,
+				6B00CF64C85006D00DB8E9F4D111E080 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-UserHook_Tests";
+			productName = "Pods-UserHook_Tests";
+			productReference = 379ADEA91E969DD255EE94A39C2C8B35 /* Pods_UserHook_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 168DC55643B17BFF70CEA1F34EED389C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF21780C841830BE5AD3F34076925612 /* JSONModel */,
+				CB5405FF9D6B539F54309FA7D4D791CA /* Pods-UserHook_Example */,
+				DACBD68BE6FA77C21F093D416334B4A8 /* Pods-UserHook_Tests */,
+				351484C0828FD777A08E311B1DBF2B40 /* UserHook */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B9370A5EEFE985A5D6A684DB17E9D58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD81CC63C75EBC6834E9AB3C4A666815 /* JSONAPI.m in Sources */,
+				0AD6D31BBC80AA532EF058FE25C4A8FA /* JSONHTTPClient.m in Sources */,
+				92640CB6046598A5DFC887AC0A7E73A6 /* JSONKeyMapper.m in Sources */,
+				622E5A34DC00A100BF34682D4E8D5150 /* JSONModel+networking.m in Sources */,
+				6AC0790866CF0590235112D7BCD444D7 /* JSONModel-dummy.m in Sources */,
+				038C74E2AAE4FEB5BFB3905FDE3F70A0 /* JSONModel.m in Sources */,
+				04752B18AECE50A7BAB7E0FC5045A72D /* JSONModelClassProperty.m in Sources */,
+				3FE5B8CC817119788800220C2D2B75B2 /* JSONModelError.m in Sources */,
+				7FE12358DB4442E7272F38441F7D8722 /* JSONValueTransformer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		974F59BF30A4ED92041A3745B5143DD1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A486BBAE75BCF35AD6BA9C55A9EAD6F /* Pods-UserHook_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9D6ED7FA16F95CFE469C4DDFD717F42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FAC3166204F00D40314F1C50013EEFD /* UHApplication.m in Sources */,
+				8C14DC77ADF3A805361ACEEB36F40F22 /* UHDeviceInfo.m in Sources */,
+				614C917DBEE8D05C84F2DEC980444D58 /* UHFeed.m in Sources */,
+				C131E58FAD5779B5E1A8FDF1754C4033 /* UHHookPoint.m in Sources */,
+				1F9E5E1CB712FE1B0105998ACB22D130 /* UHHookPointAction.m in Sources */,
+				861B76F7083A63CF4BF9B124B46CDC24 /* UHHookPointActionPrompt.m in Sources */,
+				774F6EE5205716E9099FA619705B5077 /* UHHookPointMessage.m in Sources */,
+				02CBF79C42D91D905A1BD93A4E83D403 /* UHHookPointRatingPrompt.m in Sources */,
+				F9087E57ED308815A91C6914393C67A1 /* UHHookPointSurvey.m in Sources */,
+				1BAD3230EBA1CF3E55FE9700140CF330 /* UHHostedPageViewController.m in Sources */,
+				025161463670E8D5208223DD6698DD87 /* UHMessageMeta.m in Sources */,
+				FFD116E6CB9B401A23806FFA69461AC4 /* UHMessageTemplate.m in Sources */,
+				93135BF5A3E5A4CA8590236F7BAF9F07 /* UHMessageView.m in Sources */,
+				3178E4F2672C3C6C112EA8F631C8C0FA /* UHOperation.m in Sources */,
+				50599231E865FD94B68713337E398728 /* UHPage.m in Sources */,
+				16900D25F3C2BBCDC80C94234108F438 /* UHPagesFeed.m in Sources */,
+				F972D58E5BCB641B8C5A83877813BEFB /* UHPush.m in Sources */,
+				322F524E46868BF565CA1D5320533898 /* UHPushFeed.m in Sources */,
+				ABC82891FBE253D0AA7BC816E4F2B5DF /* UHRequest.m in Sources */,
+				69DDDB53408848BF7989E5C85F45E0A5 /* UHSessionFeed.m in Sources */,
+				109A51978993F31D8941823230766E1C /* UHTemplatesFeed.m in Sources */,
+				24967EB045BF1D059EB45978D0B2458F /* UHUser.m in Sources */,
+				A9D577BF6082EBD46B491BF4DBADB0CB /* UHWebView.m in Sources */,
+				A4E30A1B34C321532091C704BFA9F7E7 /* UserHook-dummy.m in Sources */,
+				0F4B404DD7B808AE9E35A80043325D63 /* UserHook.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7B84C7D90AEBFFE54A9DEC009B156D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A6164EF873045B86C77C4CDFF3A7F56 /* Pods-UserHook_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00CB3B49D01DF774231B4442DB3EA9AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UserHook;
+			target = 351484C0828FD777A08E311B1DBF2B40 /* UserHook */;
+			targetProxy = A5BFB4B7B53C5D5C14DB07832A268160 /* PBXContainerItemProxy */;
+		};
+		29880BCD096A500B99CB0B0224409A1F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JSONModel;
+			target = AF21780C841830BE5AD3F34076925612 /* JSONModel */;
+			targetProxy = 6D4A513567B82BB6E77C7210B2FCB798 /* PBXContainerItemProxy */;
+		};
+		CF16613FA02A6909A63FAE672494D642 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JSONModel;
+			target = AF21780C841830BE5AD3F34076925612 /* JSONModel */;
+			targetProxy = 4F3B62DA39AC4A211750D2798FFE5D10 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0ACDCBCB0B6796575F46FFA2F5410C6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3005D1C40F43A03353C06453E30E0394 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3EC03A1EED3CB4075FC0567024B5FB3D /* Pods-UserHook_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-UserHook_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-UserHook_Example/Pods-UserHook_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_UserHook_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8136A2972B0D33E5CEFAE5F403A84CA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 428F2E314D79E2DC2DF82ABF54EAD429 /* JSONModel.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/JSONModel/JSONModel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JSONModel/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JSONModel/JSONModel.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = JSONModel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A09A3576AFA135B60D510EEB3F3567B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E213FC17E3AADF50BA1C6C0DAFFFC503 /* Pods-UserHook_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-UserHook_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-UserHook_Example/Pods-UserHook_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_UserHook_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A3DF81BE9FFCA167675EBE40BD3F544A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 047432C4815E5604A64B568C99AE10C1 /* UserHook.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/UserHook/UserHook-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UserHook/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/UserHook/UserHook.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = UserHook;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D24BD6AA0606E4FCB450694D3051D98E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 047432C4815E5604A64B568C99AE10C1 /* UserHook.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/UserHook/UserHook-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UserHook/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/UserHook/UserHook.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = UserHook;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D3E3D092A3FF7311A98E44BBA36FFD12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		E50B3E5DBA4D98BA6C72D4B563DF1E89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F615E35EEEB4A769B8B3BA97643982C /* Pods-UserHook_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-UserHook_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-UserHook_Tests/Pods-UserHook_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_UserHook_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E7AF7602D0FB051E619B1CC6C0D10D90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 428F2E314D79E2DC2DF82ABF54EAD429 /* JSONModel.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/JSONModel/JSONModel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JSONModel/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JSONModel/JSONModel.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = JSONModel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FC699425EB6617B9DC89FC36730BE292 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 520EBEDE9267C6C21C9F681776205574 /* Pods-UserHook_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-UserHook_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-UserHook_Tests/Pods-UserHook_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_UserHook_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3E3D092A3FF7311A98E44BBA36FFD12 /* Debug */,
+				0ACDCBCB0B6796575F46FFA2F5410C6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		35C17D96B1F5867BC90904917EC55DFA /* Build configuration list for PBXNativeTarget "Pods-UserHook_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC699425EB6617B9DC89FC36730BE292 /* Debug */,
+				E50B3E5DBA4D98BA6C72D4B563DF1E89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7C8A14E02AC9B19283AA966CF9A4EC95 /* Build configuration list for PBXNativeTarget "UserHook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D24BD6AA0606E4FCB450694D3051D98E /* Debug */,
+				A3DF81BE9FFCA167675EBE40BD3F544A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC38A268A4D00E11385E4779762FB5D4 /* Build configuration list for PBXNativeTarget "Pods-UserHook_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A09A3576AFA135B60D510EEB3F3567B6 /* Debug */,
+				3005D1C40F43A03353C06453E30E0394 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA4FF01377840F6F85F8671B6E0F48AE /* Build configuration list for PBXNativeTarget "JSONModel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7AF7602D0FB051E619B1CC6C0D10D90 /* Debug */,
+				8136A2972B0D33E5CEFAE5F403A84CA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

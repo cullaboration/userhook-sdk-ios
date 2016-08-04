@@ -1,0 +1,6 @@
+framework module UserHook {
+  umbrella header "UserHook-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,19 @@
+PODS:
+  - JSONModel (1.3.0)
+  - UserHook (1.1.1):
+    - JSONModel (~> 1.3)
+
+DEPENDENCIES:
+  - UserHook (from `../`)
+
+EXTERNAL SOURCES:
+  UserHook:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  JSONModel: 81c06ecf99190a25fa6aafceea5faffa7880868a
+  UserHook: 20dfba28edf74efae5a1f70bd9699c3c1f5b2cf6
+
+PODFILE CHECKSUM: ecdc144f786384865e7e2037e72a5c96d22f7b89
+
+COCOAPODS: 1.0.0

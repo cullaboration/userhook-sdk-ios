@@ -7,14 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		223A74B51D539B73007C4ED1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 223A74A91D539B73007C4ED1 /* AppDelegate.m */; };
+		223A74B71D539B73007C4ED1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 223A74AB1D539B73007C4ED1 /* LaunchScreen.storyboard */; };
+		223A74B81D539B73007C4ED1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 223A74AC1D539B73007C4ED1 /* Main.storyboard */; };
+		223A74B91D539B73007C4ED1 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 223A74AE1D539B73007C4ED1 /* HomeViewController.m */; };
+		223A74BA1D539B73007C4ED1 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 223A74B01D539B73007C4ED1 /* MenuViewController.m */; };
+		223A74BB1D539B73007C4ED1 /* BuyProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 223A74B21D539B73007C4ED1 /* BuyProductViewController.m */; };
+		223A74BC1D539B73007C4ED1 /* CustomFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 223A74B41D539B73007C4ED1 /* CustomFieldViewController.m */; };
+		223A74D21D539BD1007C4ED1 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 223A74BE1D539BD1007C4ED1 /* LICENSE */; };
+		223A74D31D539BD1007C4ED1 /* MFSideMenuContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 223A74C11D539BD1007C4ED1 /* MFSideMenuContainerViewController.m */; };
+		223A74D41D539BD1007C4ED1 /* MFSideMenuShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 223A74C31D539BD1007C4ED1 /* MFSideMenuShadow.m */; };
+		223A74D51D539BD1007C4ED1 /* UIViewController+MFSideMenuAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 223A74C51D539BD1007C4ED1 /* UIViewController+MFSideMenuAdditions.m */; };
+		223A74D61D539BD1007C4ED1 /* appicon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 223A74C71D539BD1007C4ED1 /* appicon-120.png */; };
+		223A74D71D539BD1007C4ED1 /* appicon-152.png in Resources */ = {isa = PBXBuildFile; fileRef = 223A74C81D539BD1007C4ED1 /* appicon-152.png */; };
+		223A74D81D539BD1007C4ED1 /* appicon-180.png in Resources */ = {isa = PBXBuildFile; fileRef = 223A74C91D539BD1007C4ED1 /* appicon-180.png */; };
+		223A74D91D539BD1007C4ED1 /* appicon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = 223A74CA1D539BD1007C4ED1 /* appicon-60.png */; };
+		223A74DA1D539BD1007C4ED1 /* appicon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 223A74CB1D539BD1007C4ED1 /* appicon-76.png */; };
+		223A74DB1D539BD1007C4ED1 /* launch_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 223A74CC1D539BD1007C4ED1 /* launch_logo.png */; };
+		223A74DC1D539BD1007C4ED1 /* launch_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 223A74CD1D539BD1007C4ED1 /* launch_logo@2x.png */; };
+		223A74DD1D539BD1007C4ED1 /* launch_logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 223A74CE1D539BD1007C4ED1 /* launch_logo@3x.png */; };
+		223A74DE1D539BD1007C4ED1 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 223A74CF1D539BD1007C4ED1 /* menu.png */; };
+		223A74DF1D539BD1007C4ED1 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 223A74D01D539BD1007C4ED1 /* menu@2x.png */; };
+		223A74E01D539BD1007C4ED1 /* menu@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 223A74D11D539BD1007C4ED1 /* menu@3x.png */; };
+		223A74E41D539F20007C4ED1 /* userhook.plist in Resources */ = {isa = PBXBuildFile; fileRef = 223A74E31D539F20007C4ED1 /* userhook.plist */; };
+		223A74E61D53B986007C4ED1 /* CHANGELOG.md in Sources */ = {isa = PBXBuildFile; fileRef = 223A74E51D53B986007C4ED1 /* CHANGELOG.md */; };
 		3272D02B442A4A054D408EB3 /* Pods_UserHook_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FA07D7671BC06E0E91FE34 /* Pods_UserHook_Example.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
 		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
-		6003F59E195388D20070C39A /* UHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* UHAppDelegate.m */; };
-		6003F5A7195388D20070C39A /* UHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* UHViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -22,7 +44,6 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		74F31E51E52E242E8661386B /* Pods_UserHook_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B38E7A2451AC36944FF900C /* Pods_UserHook_Tests.framework */; };
-		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +60,39 @@
 		05BDFE8BE32D06A9B92DF651 /* Pods-UserHook_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserHook_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UserHook_Tests/Pods-UserHook_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		0621FB711712AC86BFAF09A9 /* Pods-UserHook_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserHook_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UserHook_Example/Pods-UserHook_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		0A8C9238D01A2C238E12BB17 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		223A74A81D539B73007C4ED1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		223A74A91D539B73007C4ED1 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		223A74AB1D539B73007C4ED1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		223A74AC1D539B73007C4ED1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		223A74AD1D539B73007C4ED1 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		223A74AE1D539B73007C4ED1 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		223A74AF1D539B73007C4ED1 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		223A74B01D539B73007C4ED1 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		223A74B11D539B73007C4ED1 /* BuyProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyProductViewController.h; sourceTree = "<group>"; };
+		223A74B21D539B73007C4ED1 /* BuyProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyProductViewController.m; sourceTree = "<group>"; };
+		223A74B31D539B73007C4ED1 /* CustomFieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomFieldViewController.h; sourceTree = "<group>"; };
+		223A74B41D539B73007C4ED1 /* CustomFieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomFieldViewController.m; sourceTree = "<group>"; };
+		223A74BE1D539BD1007C4ED1 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		223A74BF1D539BD1007C4ED1 /* MFSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSideMenu.h; sourceTree = "<group>"; };
+		223A74C01D539BD1007C4ED1 /* MFSideMenuContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSideMenuContainerViewController.h; sourceTree = "<group>"; };
+		223A74C11D539BD1007C4ED1 /* MFSideMenuContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFSideMenuContainerViewController.m; sourceTree = "<group>"; };
+		223A74C21D539BD1007C4ED1 /* MFSideMenuShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSideMenuShadow.h; sourceTree = "<group>"; };
+		223A74C31D539BD1007C4ED1 /* MFSideMenuShadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFSideMenuShadow.m; sourceTree = "<group>"; };
+		223A74C41D539BD1007C4ED1 /* UIViewController+MFSideMenuAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MFSideMenuAdditions.h"; sourceTree = "<group>"; };
+		223A74C51D539BD1007C4ED1 /* UIViewController+MFSideMenuAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MFSideMenuAdditions.m"; sourceTree = "<group>"; };
+		223A74C71D539BD1007C4ED1 /* appicon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appicon-120.png"; sourceTree = "<group>"; };
+		223A74C81D539BD1007C4ED1 /* appicon-152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appicon-152.png"; sourceTree = "<group>"; };
+		223A74C91D539BD1007C4ED1 /* appicon-180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appicon-180.png"; sourceTree = "<group>"; };
+		223A74CA1D539BD1007C4ED1 /* appicon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appicon-60.png"; sourceTree = "<group>"; };
+		223A74CB1D539BD1007C4ED1 /* appicon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appicon-76.png"; sourceTree = "<group>"; };
+		223A74CC1D539BD1007C4ED1 /* launch_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch_logo.png; sourceTree = "<group>"; };
+		223A74CD1D539BD1007C4ED1 /* launch_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch_logo@2x.png"; sourceTree = "<group>"; };
+		223A74CE1D539BD1007C4ED1 /* launch_logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch_logo@3x.png"; sourceTree = "<group>"; };
+		223A74CF1D539BD1007C4ED1 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		223A74D01D539BD1007C4ED1 /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
+		223A74D11D539BD1007C4ED1 /* menu@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@3x.png"; sourceTree = "<group>"; };
+		223A74E31D539F20007C4ED1 /* userhook.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = userhook.plist; sourceTree = "<group>"; };
+		223A74E51D53B986007C4ED1 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		2B38E7A2451AC36944FF900C /* Pods_UserHook_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserHook_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37FA07D7671BC06E0E91FE34 /* Pods_UserHook_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserHook_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* UserHook_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserHook_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,10 +103,6 @@
 		6003F597195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F599195388D20070C39A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6003F59B195388D20070C39A /* UserHook-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UserHook-Prefix.pch"; sourceTree = "<group>"; };
-		6003F59C195388D20070C39A /* UHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UHAppDelegate.h; sourceTree = "<group>"; };
-		6003F59D195388D20070C39A /* UHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UHAppDelegate.m; sourceTree = "<group>"; };
-		6003F5A5195388D20070C39A /* UHViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UHViewController.h; sourceTree = "<group>"; };
-		6003F5A6195388D20070C39A /* UHViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UHViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AE195388D20070C39A /* UserHook_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UserHook_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -63,7 +113,6 @@
 		61DAA51DF273418487C2E084 /* UserHook.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = UserHook.podspec; path = ../UserHook.podspec; sourceTree = "<group>"; };
 		6D33E793E27B8F43F5F12D43 /* Pods-UserHook_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserHook_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UserHook_Tests/Pods-UserHook_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		7BB515D68C0E38F072DAFCB9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		F78226A864827CB7AFB3F826 /* Pods-UserHook_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserHook_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-UserHook_Example/Pods-UserHook_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +142,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		223A74BD1D539BD1007C4ED1 /* MFSideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				223A74BE1D539BD1007C4ED1 /* LICENSE */,
+				223A74BF1D539BD1007C4ED1 /* MFSideMenu.h */,
+				223A74C01D539BD1007C4ED1 /* MFSideMenuContainerViewController.h */,
+				223A74C11D539BD1007C4ED1 /* MFSideMenuContainerViewController.m */,
+				223A74C21D539BD1007C4ED1 /* MFSideMenuShadow.h */,
+				223A74C31D539BD1007C4ED1 /* MFSideMenuShadow.m */,
+				223A74C41D539BD1007C4ED1 /* UIViewController+MFSideMenuAdditions.h */,
+				223A74C51D539BD1007C4ED1 /* UIViewController+MFSideMenuAdditions.m */,
+			);
+			path = MFSideMenu;
+			sourceTree = "<group>";
+		};
+		223A74C61D539BD1007C4ED1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				223A74C71D539BD1007C4ED1 /* appicon-120.png */,
+				223A74C81D539BD1007C4ED1 /* appicon-152.png */,
+				223A74C91D539BD1007C4ED1 /* appicon-180.png */,
+				223A74CA1D539BD1007C4ED1 /* appicon-60.png */,
+				223A74CB1D539BD1007C4ED1 /* appicon-76.png */,
+				223A74CC1D539BD1007C4ED1 /* launch_logo.png */,
+				223A74CD1D539BD1007C4ED1 /* launch_logo@2x.png */,
+				223A74CE1D539BD1007C4ED1 /* launch_logo@3x.png */,
+				223A74CF1D539BD1007C4ED1 /* menu.png */,
+				223A74D01D539BD1007C4ED1 /* menu@2x.png */,
+				223A74D11D539BD1007C4ED1 /* menu@3x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -130,11 +212,20 @@
 		6003F593195388D20070C39A /* Example for UserHook */ = {
 			isa = PBXGroup;
 			children = (
-				6003F59C195388D20070C39A /* UHAppDelegate.h */,
-				6003F59D195388D20070C39A /* UHAppDelegate.m */,
-				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
-				6003F5A5195388D20070C39A /* UHViewController.h */,
-				6003F5A6195388D20070C39A /* UHViewController.m */,
+				223A74BD1D539BD1007C4ED1 /* MFSideMenu */,
+				223A74C61D539BD1007C4ED1 /* Resources */,
+				223A74A81D539B73007C4ED1 /* AppDelegate.h */,
+				223A74A91D539B73007C4ED1 /* AppDelegate.m */,
+				223A74AB1D539B73007C4ED1 /* LaunchScreen.storyboard */,
+				223A74AC1D539B73007C4ED1 /* Main.storyboard */,
+				223A74AD1D539B73007C4ED1 /* HomeViewController.h */,
+				223A74AE1D539B73007C4ED1 /* HomeViewController.m */,
+				223A74AF1D539B73007C4ED1 /* MenuViewController.h */,
+				223A74B01D539B73007C4ED1 /* MenuViewController.m */,
+				223A74B11D539B73007C4ED1 /* BuyProductViewController.h */,
+				223A74B21D539B73007C4ED1 /* BuyProductViewController.m */,
+				223A74B31D539B73007C4ED1 /* CustomFieldViewController.h */,
+				223A74B41D539B73007C4ED1 /* CustomFieldViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -145,6 +236,7 @@
 		6003F594195388D20070C39A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				223A74E31D539F20007C4ED1 /* userhook.plist */,
 				6003F595195388D20070C39A /* UserHook-Info.plist */,
 				6003F596195388D20070C39A /* InfoPlist.strings */,
 				6003F599195388D20070C39A /* main.m */,
@@ -175,6 +267,7 @@
 		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
+				223A74E51D53B986007C4ED1 /* CHANGELOG.md */,
 				61DAA51DF273418487C2E084 /* UserHook.podspec */,
 				7BB515D68C0E38F072DAFCB9 /* README.md */,
 				0A8C9238D01A2C238E12BB17 /* LICENSE */,
@@ -276,8 +369,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
+				223A74E01D539BD1007C4ED1 /* menu@3x.png in Resources */,
+				223A74D61D539BD1007C4ED1 /* appicon-120.png in Resources */,
+				223A74E41D539F20007C4ED1 /* userhook.plist in Resources */,
+				223A74D71D539BD1007C4ED1 /* appicon-152.png in Resources */,
+				223A74D21D539BD1007C4ED1 /* LICENSE in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+				223A74DA1D539BD1007C4ED1 /* appicon-76.png in Resources */,
+				223A74DD1D539BD1007C4ED1 /* launch_logo@3x.png in Resources */,
+				223A74D91D539BD1007C4ED1 /* appicon-60.png in Resources */,
+				223A74B81D539B73007C4ED1 /* Main.storyboard in Resources */,
+				223A74B71D539B73007C4ED1 /* LaunchScreen.storyboard in Resources */,
+				223A74D81D539BD1007C4ED1 /* appicon-180.png in Resources */,
+				223A74DC1D539BD1007C4ED1 /* launch_logo@2x.png in Resources */,
+				223A74DE1D539BD1007C4ED1 /* menu.png in Resources */,
+				223A74DB1D539BD1007C4ED1 /* launch_logo.png in Resources */,
+				223A74DF1D539BD1007C4ED1 /* menu@2x.png in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,9 +497,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F59E195388D20070C39A /* UHAppDelegate.m in Sources */,
-				6003F5A7195388D20070C39A /* UHViewController.m in Sources */,
+				223A74D41D539BD1007C4ED1 /* MFSideMenuShadow.m in Sources */,
+				223A74E61D53B986007C4ED1 /* CHANGELOG.md in Sources */,
+				223A74BC1D539B73007C4ED1 /* CustomFieldViewController.m in Sources */,
+				223A74B51D539B73007C4ED1 /* AppDelegate.m in Sources */,
+				223A74D51D539BD1007C4ED1 /* UIViewController+MFSideMenuAdditions.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				223A74B91D539B73007C4ED1 /* HomeViewController.m in Sources */,
+				223A74BA1D539B73007C4ED1 /* MenuViewController.m in Sources */,
+				223A74BB1D539B73007C4ED1 /* BuyProductViewController.m in Sources */,
+				223A74D31D539BD1007C4ED1 /* MFSideMenuContainerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,12 +626,11 @@
 			baseConfigurationReference = 0621FB711712AC86BFAF09A9 /* Pods-UserHook_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UserHook/UserHook-Prefix.pch";
 				INFOPLIST_FILE = "UserHook/UserHook-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cullaboration.UserHookDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -528,12 +641,11 @@
 			baseConfigurationReference = F78226A864827CB7AFB3F826 /* Pods-UserHook_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UserHook/UserHook-Prefix.pch";
 				INFOPLIST_FILE = "UserHook/UserHook-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cullaboration.UserHookDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

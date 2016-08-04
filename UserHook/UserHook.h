@@ -1,0 +1,99 @@
+/*
+ * Copyright (c) 2015 - present, Cullaboration Media, LLC.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+#import <Foundation/Foundation.h>
+#import "UHHookPoint.h"
+#import "UHHostedPageViewController.h"
+#import "UHUser.h"
+#import "UHPage.h"
+#import "UHApplication.h"
+#import "UHMessageMeta.h"
+#import "UHOperation.h"
+#import "UHHandlers.h"
+
+#define UH_SDK_VERSION @"1.1.1"
+#define UH_API_VERSION @"1"
+#define UH_API_URL @"https://api.userhook.com/"
+#define UH_HOST_URL @"https://formhost.userhook.com/"
+#define UH_PROTOCOL @"uh"
+
+#define UH_NotificationNewFeedback @"UHNewFeedback"
+
+
+#define UH_DEBUG 0
+
+#define UH_TIME_BETWEEN_SESSIONS_IN_SECONDS 600 // 10 minutes
+
+#if UH_DEBUG
+#   define UH_LOG(fmt, ...) NSLog(fmt, ##__VA_ARGS__)
+#else
+#   define UH_LOG(...)
+#endif
+
+
+
+
+@interface UserHook : NSObject
+
+@property (nonatomic, copy, readonly) NSString * applicationId;
+@property (nonatomic, copy, readonly) NSString * apiKey;
+@property (nonatomic, assign) BOOL hasNewFeedback;
+@property (nonatomic, copy) NSString * promptNibName;
+
+
+@property (nonatomic, copy) NSString * navControllerClassName;
+@property (nonatomic, copy) UHPayloadHandler payloadHandler;
+
++(void) setApplicationId:(NSString *) applicationId apiKey:(NSString *) apiKey;
++(UserHook *) sharedInstance;
+
++(void) setPayloadHandler:(UHPayloadHandler) payloadHandler;
+
+
+#pragma mark - feedback settings
+// the title to use for the feedback screen (ie. "Feedback" or "Support")
++(void) setFeedbackScreenTitle:(NSString *) feedbackScreenTitle;
++(NSString *) feedbackScreenTitle;
++(void) setFeedbackCustomFields:(NSDictionary *) feedbackCustomFields;
++(NSDictionary *) feedbackCustomFields;
+
+
+# pragma mark - session tracking
++(void) updateSessionData:(NSDictionary * )data;
++(void) updateCustomFields:(NSDictionary * )data;
+-(void) setApplicationData:(UHApplication *) application;
+
++(void) markRated;
++(void) updatePurchasedItem:(NSString *)sku forAmount:(NSNumber *)price;
+
+# pragma mark - hook points
++(void) fetchHookPoint:(UHHookPointHandler) handler;
++(void) trackHookPointDisplay:(UHHookPoint *) hookPoint;
++(void) trackHookPointInteraction:(UHHookPoint *) hookPoint;
+
+# pragma mark - hosted pages
++(UHHostedPageViewController *) createHostedPageViewController:(NSString *) pagePath;
++(UHHostedPageViewController *) createFeedbackViewController;
++(void) fetchPageNames:(UHArrayHandler) handler;
+
+#pragma mark - push messaging
++(void) registerDeviceToken:(NSData *) deviceToken;
++(void) registerForPush:(NSDictionary *) launchOptions;
++(void) handlePushNotification:(NSDictionary *) userInfo;
++(BOOL) isPushFromUserHook:(NSDictionary *) notificationUserInfo;
+
+#pragma mark - actions
++(void) rateThisApp;
++(void) displayRatePrompt:(NSString *) message positiveButtonTitle:(NSString *) positiveTitle negativeButtonTitle:(NSString *) negativeTitle;
++(void) displaySurvey:(NSString *) surveyId title:(NSString *) surveyTitle hookpointId:(NSString *) hookpointId;
++(void) displayFeedback;
++(void) displayFeedbackPrompt:(NSString *)message positiveButtonTitle:(NSString *) positiveTitle negativeButtonTitle:(NSString *) negativeTitle;
++(void) handlePayload:(NSDictionary *) payload;
++(void) displayPrompt:(NSString *) message button1:(UHMessageMetaButton *) button1 button2:(UHMessageMetaButton *) button2;
+
+@end
