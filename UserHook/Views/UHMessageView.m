@@ -231,6 +231,8 @@
     // create webview for message content
     UIWebView * webView = [[UHWebView alloc] init];
     webView.delegate = self;
+    webView.backgroundColor = [UIColor clearColor];
+    webView.opaque = NO;
     
     self.contentView = webView;
     
