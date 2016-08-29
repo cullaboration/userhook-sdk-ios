@@ -16,7 +16,7 @@
 #import "UHOperation.h"
 #import "UHHandlers.h"
 
-#define UH_SDK_VERSION @"1.1.2"
+#define UH_SDK_VERSION @"1.1.3"
 #define UH_API_VERSION @"1"
 #define UH_API_URL @"https://api.userhook.com/"
 #define UH_HOST_URL @"https://formhost.userhook.com/"
