@@ -1,6 +1,10 @@
 # Changelog
 
-## v.1.1.3 (2016-08-29)
+## v1.2.1 (2016-11-22)
+- Added completion handlers for updateSessionData, updateCustomFields, updatePurchasedItem
+- Added convenience method for displayStaticPage
+
+## v1.1.3 (2016-08-29)
 - Set UHMessageView webview background color to clear
 
 ## v1.1.2 (2016-08-04)
