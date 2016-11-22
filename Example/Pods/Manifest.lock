@@ -1,9 +1,11 @@
 PODS:
   - JSONModel (1.3.0)
-  - UserHook (1.1.1):
+  - OCMock (3.3.1)
+  - UserHook (1.1.3):
     - JSONModel
 
 DEPENDENCIES:
+  - OCMock
   - UserHook (from `../`)
 
 EXTERNAL SOURCES:
@@ -12,8 +14,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   JSONModel: 81c06ecf99190a25fa6aafceea5faffa7880868a
-  UserHook: 6773ce58c0a48a62165a16809ca25c89ae3b6e29
+  OCMock: f3f61e6eaa16038c30caa5798c5e49d3307b6f22
+  UserHook: 8ced92bae52b52d18a488169ed5e58ca9c4d2444
 
-PODFILE CHECKSUM: ecdc144f786384865e7e2037e72a5c96d22f7b89
+PODFILE CHECKSUM: 652cac50cfce654f7e58950c43d7207bb5628cfa
 
 COCOAPODS: 1.0.0

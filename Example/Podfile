@@ -5,7 +5,9 @@ target 'UserHook_Example' do
 
   target 'UserHook_Tests' do
     inherit! :search_paths
-
+    
+    pod 'UserHook', :path => '../'
+    pod 'OCMock'
     
   end
 end

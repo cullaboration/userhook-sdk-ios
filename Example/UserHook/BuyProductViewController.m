@@ -24,23 +24,30 @@
 -(void) buyProduct:(NSString *) sku price:(NSNumber *)price {
     
     // send the purchase data to User Hook
-    [UserHook updatePurchasedItem:sku forAmount:price];
+    [UserHook updatePurchasedItem:sku forAmount:price handler:^(BOOL success) {
+        if (success) {
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                // show alert to user confirming the purchase
+                UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Item Purchased" message:[NSString  stringWithFormat:@"You just bought %@ for $%@", sku, price] preferredStyle:UIAlertControllerStyleAlert];
+                
+                UIAlertAction *okAction = [UIAlertAction
+                                           actionWithTitle:@"OK"
+                                           style:UIAlertActionStyleDefault
+                                           handler:^(UIAlertAction *action)
+                                           {
+                                               
+                                           }];
+                
+                [alert addAction:okAction];
+                
+                
+                [self presentViewController:alert animated:YES completion:nil];
+            });
+        }
+    }];
     
-    // show alert to user confirming the purchase
-    UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Item Purchased" message:[NSString  stringWithFormat:@"You just bought %@ for $%@", sku, price] preferredStyle:UIAlertControllerStyleAlert];
     
-    UIAlertAction *okAction = [UIAlertAction
-                               actionWithTitle:@"OK"
-                               style:UIAlertActionStyleDefault
-                               handler:^(UIAlertAction *action)
-                               {
-                                   
-                               }];
-    
-    [alert addAction:okAction];
-    
-    
-    [self presentViewController:alert animated:YES completion:nil];
     
     
 }

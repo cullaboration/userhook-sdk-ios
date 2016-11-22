@@ -56,7 +56,11 @@ static BOOL fetchingHookpoints;
     [self fetchMessageTemplates];
 }
 
--(void) updateSessionData:(NSDictionary *) p {
+-(void) updateSessionData:(NSDictionary *)params {
+    [self updateSessionData:params handler:nil];
+}
+
+-(void) updateSessionData:(NSDictionary *) p handler:(UHResponseHandler)handler {
     
     NSMutableDictionary * parameters = [NSMutableDictionary dictionaryWithDictionary:p];
     
@@ -76,8 +80,6 @@ static BOOL fetchingHookpoints;
     
     UHRequest * request = [UHRequest postRequestWithPath:UHPathSession parameters:parameters];
     
-    
-    
     NSURLSessionTask * task = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
         if (error) {
@@ -89,32 +91,7 @@ static BOOL fetchingHookpoints;
             return;
         }
         
-        
-        NSError *jsonError;
-        UHSessionFeed  * feed = [[UHSessionFeed alloc] initWithData:data error:&jsonError];
-        
-       
-        if ([feed.status isEqualToString:@"success"]) {
-            // save user id
-            [UHUser setUserId:feed.data.user];
-            
-            // save user key
-            if (feed.data.key) {
-                [UHUser setKey:feed.data.key];
-            }
-            
-            if (feed.data.new_feedback) {
-                [UserHook sharedInstance].hasNewFeedback = YES;
-                [[NSNotificationCenter defaultCenter] postNotificationName:UH_NotificationNewFeedback object:nil];
-            }
-            
-            // store some basic app information for later usage
-            if (feed.data.application) {
-                [[UserHook sharedInstance] setApplicationData:feed.data.application];
-            }
-            
-            
-        }
+        [self handleUpdateSession:data handler:handler];
         
         
     }];
@@ -122,6 +99,45 @@ static BOOL fetchingHookpoints;
     [task resume];
     
     
+}
+
+-(void) handleUpdateSession:(NSData *) data handler:(UHResponseHandler) handler {
+    
+    NSError *jsonError;
+    UHSessionFeed  * feed = [[UHSessionFeed alloc] initWithData:data error:&jsonError];
+    
+    if ([feed.status isEqualToString:@"success"]) {
+        // save user id
+        [UHUser setUserId:feed.data.user];
+        
+        // save user key
+        if (feed.data.key) {
+            [UHUser setKey:feed.data.key];
+        }
+        
+        if (feed.data.new_feedback) {
+            [UserHook sharedInstance].hasNewFeedback = YES;
+            [[NSNotificationCenter defaultCenter] postNotificationName:UH_NotificationNewFeedback object:nil];
+        }
+        
+        // store some basic app information for later usage
+        if (feed.data.application) {
+            [[UserHook sharedInstance] setApplicationData:feed.data.application];
+        }
+        
+        // pass successful result to handler
+        if (handler) {
+            handler(YES);
+        }
+        
+    }
+    else {
+        // pass unsuccessful result to handler
+        if (handler) {
+            handler(NO);
+        }
+    }
+
 }
 
 -(void) fetchHookpoint:(UHHookPointHandler) handler {
@@ -158,33 +174,39 @@ static BOOL fetchingHookpoints;
             return;
         }
         
-        NSError *jsonError;
-        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data
-                                                             options:NSJSONReadingMutableContainers
-                                                               error:&jsonError];
-        
-        
-        if ([[json valueForKey:@"status"] isEqualToString:@"success"]) {
-            
-            NSDictionary * data = [json valueForKey:@"data"];
-            UHHookPoint * hookPoint;
-            
-            if ([data valueForKey:@"hookpoint"] != nil && [data valueForKey:@"hookpoint"] != (id)[NSNull null] && [[data valueForKey:@"hookpoint"] isKindOfClass:[NSDictionary class]]) {
-                hookPoint = [UHHookPoint createWithData:[json valueForKey:@"data"]];
-                
-                if (handler) {
-                    handler(hookPoint);
-                }
-            }
-            
-        }
-        
+        [self handleFetchHookpoint:data handler:handler];
         
     }];
     
     [task resume];
     
     
+}
+
+-(void) handleFetchHookpoint:(NSData *) data handler:(UHHookPointHandler) handler {
+    
+    
+    NSError *jsonError;
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data
+                                                         options:NSJSONReadingMutableContainers
+                                                           error:&jsonError];
+    
+    
+    if ([[json valueForKey:@"status"] isEqualToString:@"success"]) {
+        
+        NSDictionary * data = [json valueForKey:@"data"];
+        UHHookPoint * hookPoint;
+        
+        if ([data valueForKey:@"hookpoint"] != nil && [data valueForKey:@"hookpoint"] != (id)[NSNull null] && [[data valueForKey:@"hookpoint"] isKindOfClass:[NSDictionary class]]) {
+            hookPoint = [UHHookPoint createWithData:[json valueForKey:@"data"]];
+            
+            if (handler) {
+                handler(hookPoint);
+            }
+             
+        }
+        
+    }
 }
 
 -(void) trackHookpointDisplay:(UHHookPoint *)hookPoint {
@@ -244,22 +266,7 @@ static BOOL fetchingHookpoints;
             return;
         }
         
-        NSError *jsonError;
-        UHPagesFeed * feed = [[UHPagesFeed alloc] initWithData:data error:&jsonError];
-        
-        
-        if ([feed.status isEqualToString:@"success"]) {
-            
-            UH_LOG(@"page names loaded");
-            
-            NSMutableArray * items = [NSMutableArray array];
-            [items addObjectsFromArray:feed.data];
-            
-            if (handler) {
-                handler(items);
-            }
-        }
-        
+        [self handleFetchPageNames:data handler:handler];
         
     }];
     
@@ -267,6 +274,26 @@ static BOOL fetchingHookpoints;
     
 }
 
+-(void) handleFetchPageNames:(NSData *) data handler:(UHArrayHandler) handler {
+    
+    NSError *jsonError;
+    UHPagesFeed * feed = [[UHPagesFeed alloc] initWithData:data error:&jsonError];
+    
+    
+    if ([feed.status isEqualToString:@"success"]) {
+        
+        UH_LOG(@"page names loaded");
+        
+        NSMutableArray * items = [NSMutableArray array];
+        [items addObjectsFromArray:feed.data];
+        
+        if (handler) {
+            handler(items);
+        }
+    }
+
+    
+}
 
 -(void) fetchMessageTemplates  {
     
@@ -284,23 +311,29 @@ static BOOL fetchingHookpoints;
             return;
         }
         
-        NSError *jsonError;
-        UHTemplatesFeed * feed = [[UHTemplatesFeed alloc] initWithData:data error:&jsonError];
+        [self handleFetchMessageTemplates:data];
         
-        if (feed.templates) {
-            
-            for (NSString * name in [feed.templates allKeys]) {
-                NSString * template = [feed.templates valueForKey:name];
-                
-                [[UHMessageTemplate sharedInstance] addToCache:name value:template];
-            }
-            
-        }
-    
     }];
     
     [task resume];
     
+}
+
+-(void) handleFetchMessageTemplates:(NSData *) data {
+    
+    NSError *jsonError;
+    UHTemplatesFeed * feed = [[UHTemplatesFeed alloc] initWithData:data error:&jsonError];
+    
+    if (feed.templates) {
+        
+        for (NSString * name in [feed.templates allKeys]) {
+            NSString * template = [feed.templates valueForKey:name];
+            
+            [[UHMessageTemplate sharedInstance] addToCache:name value:template];
+        }
+        
+    }
+
 }
 
 -(void) registerDeviceToken:(NSString * )deviceToken forEnvironment:(NSString *)environment retryCount:(int)retryCount {

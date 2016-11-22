@@ -13,5 +13,6 @@ typedef void(^UHDictionaryHandler)(NSDictionary * response);
 typedef void(^UHArrayHandler)(NSArray * items);
 typedef void(^UHPushHandler)(NSDictionary * payload);
 typedef void(^UHPayloadHandler)(NSDictionary * payload);
+typedef void(^UHResponseHandler)(BOOL success);
 
 #endif /* UHHandlers_h */

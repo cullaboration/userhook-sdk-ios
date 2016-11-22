@@ -73,6 +73,10 @@ static UserHook * _sharedInstance;
     return  _sharedInstance;
 }
 
+// really only useful to help with testing
++(void) setSharedInstance:(UserHook *) instance {
+    _sharedInstance = instance;
+}
 
 -(void) dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
@@ -125,8 +129,11 @@ static UserHook * _sharedInstance;
     [op updateSessionData:data];
 }
 
-
 +(void) updateCustomFields:(NSDictionary * )data {
+    [self updateCustomFields:data handler:nil];
+}
+
++(void) updateCustomFields:(NSDictionary * )data handler:(UHResponseHandler)handler {
     UH_LOG(@"updating custom fields");
     
     UHOperation * op = [[UHOperation alloc] init];
@@ -136,7 +143,7 @@ static UserHook * _sharedInstance;
         [customFieldData setObject:data[key] forKey:[NSString stringWithFormat:@"custom_fields.%@",key]];
     }
     
-    [op updateSessionData:customFieldData];
+    [op updateSessionData:customFieldData handler:handler];
 }
 
 +(void) markRated {
@@ -148,11 +155,15 @@ static UserHook * _sharedInstance;
 }
 
 +(void) updatePurchasedItem:(NSString *)sku forAmount:(NSNumber *)price {
+    [self updatePurchasedItem:sku forAmount:price handler:nil];
+}
+
++(void) updatePurchasedItem:(NSString *)sku forAmount:(NSNumber *)price handler:(UHResponseHandler)handler {
     
     UH_LOG(@"user purchased item");
     UHOperation * op = [[UHOperation alloc] init];
     NSDictionary * data = [NSDictionary dictionaryWithObjectsAndKeys:sku,@"purchases",price,@"purchases_amount", nil];
-    [op updateSessionData:data];
+    [op updateSessionData:data handler:handler];
 }
 
 +(void) fetchHookPoint:(UHHookPointHandler)handler {
@@ -261,6 +272,10 @@ static UserHook * _sharedInstance;
 
 +(void) registerDeviceToken:(NSData *) deviceToken {
     [UHPush registerDeviceToken:deviceToken];
+}
+
++(void) registerDeviceTokenString:(NSString *) tokenString {
+    [UHPush registerDeviceTokenString:tokenString];
 }
 
 
@@ -457,6 +472,20 @@ static UserHook * _sharedInstance;
     if ([UserHook sharedInstance].payloadHandler) {
         [UserHook sharedInstance].payloadHandler(payload);
     }
+}
+
++(void) displayStaticPage:(NSString *)slug title:(NSString *)title {
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        UHHostedPageViewController * controller = [self createHostedPageViewController:slug];
+        controller.title = title;
+
+        [self displayUHController:controller];
+        
+    });
+    
+    
 }
 
 @end

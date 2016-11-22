@@ -161,13 +161,9 @@
     }
     else if ([[item valueForKey:@"type"] isEqualToString:@"page"]) {
         
-        NSString * slug  = [item valueForKey:@"slug"];
-        UHHostedPageViewController * page = [UserHook createHostedPageViewController:slug];
-        page.navigationItem.title = [item valueForKey:@"title"];
+        [UserHook displayStaticPage:[item valueForKey:@"slug"] title:[item valueForKey:@"title"]];
         
-        UINavigationController * navController  = [[UINavigationController alloc] initWithRootViewController:page];
-        [self presentViewController:navController animated:YES completion:nil];
-        
+    
     }
     else if ([[item valueForKey:@"type"] isEqualToString:@"rate"]) {
         

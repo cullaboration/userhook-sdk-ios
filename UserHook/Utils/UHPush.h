@@ -11,6 +11,8 @@
 @interface UHPush : NSObject
 
 +(void) registerDeviceToken:(NSData *)deviceToken;
++(void) registerDeviceTokenString:(NSString *)tokenString;
+
 +(void) trackPushOpen:(NSDictionary *) launchOptions;
 
 +(NSDictionary *) getPushPayload:(NSDictionary * )notificationUserInfo;

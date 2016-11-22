@@ -18,6 +18,7 @@
 
 -(void) createSession;
 -(void) updateSessionData:(NSDictionary *) params;
+-(void) updateSessionData:(NSDictionary *) params handler:(UHResponseHandler) handler;
 
 -(void) fetchHookpoint:(UHHookPointHandler) handler;
 -(void) trackHookpointDisplay:(UHHookPoint *) hookPoint;

@@ -16,7 +16,7 @@
 #import "UHOperation.h"
 #import "UHHandlers.h"
 
-#define UH_SDK_VERSION @"1.1.3"
+#define UH_SDK_VERSION @"1.2.1"
 #define UH_API_VERSION @"1"
 #define UH_API_URL @"https://api.userhook.com/"
 #define UH_HOST_URL @"https://formhost.userhook.com/"
@@ -52,6 +52,10 @@
 +(void) setApplicationId:(NSString *) applicationId apiKey:(NSString *) apiKey;
 +(UserHook *) sharedInstance;
 
+
+// really only useful to help with testing
++(void) setSharedInstance:(UserHook *) instance;
+
 +(void) setPayloadHandler:(UHPayloadHandler) payloadHandler;
 
 
@@ -66,10 +70,13 @@
 # pragma mark - session tracking
 +(void) updateSessionData:(NSDictionary * )data;
 +(void) updateCustomFields:(NSDictionary * )data;
++(void) updateCustomFields:(NSDictionary *)data handler:(UHResponseHandler) handler;
+
 -(void) setApplicationData:(UHApplication *) application;
 
 +(void) markRated;
 +(void) updatePurchasedItem:(NSString *)sku forAmount:(NSNumber *)price;
++(void) updatePurchasedItem:(NSString *)sku forAmount:(NSNumber *)pric handler:(UHResponseHandler) handler;
 
 # pragma mark - hook points
 +(void) fetchHookPoint:(UHHookPointHandler) handler;
@@ -83,6 +90,7 @@
 
 #pragma mark - push messaging
 +(void) registerDeviceToken:(NSData *) deviceToken;
++(void) registerDeviceTokenString:(NSString *) tokenString;
 +(void) registerForPush:(NSDictionary *) launchOptions;
 +(void) handlePushNotification:(NSDictionary *) userInfo;
 +(BOOL) isPushFromUserHook:(NSDictionary *) notificationUserInfo;
@@ -95,5 +103,5 @@
 +(void) displayFeedbackPrompt:(NSString *)message positiveButtonTitle:(NSString *) positiveTitle negativeButtonTitle:(NSString *) negativeTitle;
 +(void) handlePayload:(NSDictionary *) payload;
 +(void) displayPrompt:(NSString *) message button1:(UHMessageMetaButton *) button1 button2:(UHMessageMetaButton *) button2;
-
++(void) displayStaticPage:(NSString *)slug title:(NSString *)title;
 @end

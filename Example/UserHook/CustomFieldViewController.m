@@ -8,6 +8,7 @@
 
 #import "CustomFieldViewController.h"
 #import <UserHook/UserHook.h>
+#import "AppDelegate.h"
 
 @implementation CustomFieldViewController {
     NSInteger currentScore;
@@ -38,7 +39,13 @@
     NSMutableDictionary * customFields = [NSMutableDictionary dictionary];
     [customFields setValue:[NSNumber numberWithInteger:currentScore] forKey:@"score"];
     
-    [UserHook updateCustomFields:customFields];
+    [UserHook updateCustomFields:customFields handler:^(BOOL success) {
+        
+        if (success) {
+            // fetch hook points after the custom field is saved
+            [((AppDelegate *)[UIApplication sharedApplication].delegate) loadHookpoints];
+        }
+    }];
     
     
 }

@@ -22,15 +22,16 @@ static NSString * pushEnvironment = @"prod";
 +(void) registerDeviceToken:(NSData *)deviceToken {
     
     NSString * deviceTokenString = [self convertToNSString:deviceToken];
-    
-    
-    
-    UHOperation * operation = [[UHOperation alloc] init];
-    [operation registerDeviceToken:deviceTokenString forEnvironment:pushEnvironment retryCount:1];
-    
+    [self registerDeviceTokenString:deviceTokenString];
     
 }
 
+
++(void) registerDeviceTokenString:(NSString *)tokenString {
+    
+    UHOperation * operation = [UHOperation new];
+    [operation registerDeviceToken:tokenString forEnvironment:pushEnvironment retryCount:1];
+}
 
 + (NSString *) convertToNSString:(NSData *)deviceToken {
     NSString *tokenStr = [deviceToken description];
@@ -46,7 +47,7 @@ static NSString * pushEnvironment = @"prod";
     
     if (userInfo) {
         
-        UHOperation * operation = [[UHOperation alloc] init];
+        UHOperation * operation = [UHOperation new];
         [operation trackPushOpen:userInfo forEnvironment:pushEnvironment];
         
     }
