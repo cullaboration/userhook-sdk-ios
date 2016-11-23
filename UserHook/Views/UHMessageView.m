@@ -83,6 +83,8 @@
 
 
 -(void)awakeFromNib {
+    
+    [super awakeFromNib];
     _overlay.alpha = 0;
     _contentView.alpha = 0;
     

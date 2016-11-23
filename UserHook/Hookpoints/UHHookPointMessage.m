@@ -43,7 +43,7 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         
         UHMessageView * messageView = [UHMessageView createViewForHookPoint:self];
-        UIViewController * rootController = [UIApplication sharedApplication].keyWindow.rootViewController;
+        UIViewController * rootController = [UserHook topViewController];
         messageView.frame = rootController.view.frame;
         [rootController.view addSubview:messageView];
         

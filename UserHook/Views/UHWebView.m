@@ -13,6 +13,8 @@
 @implementation UHWebView
 
 -(void)awakeFromNib {
+    [super awakeFromNib];
+    
     self.delegate = self;
 }
 

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'UserHook'
-  s.version          = '1.2.1'
+  s.version          = '1.2.2'
   s.summary          = 'iOS SDK for the User Hook service'
 
   s.homepage         = 'https://userhook.com'

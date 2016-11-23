@@ -58,6 +58,8 @@
 
 +(void) setPayloadHandler:(UHPayloadHandler) payloadHandler;
 
+// find the view controller that is currently displaying on the screen
++(UIViewController *) topViewController;
 
 #pragma mark - feedback settings
 // the title to use for the feedback screen (ie. "Feedback" or "Support")

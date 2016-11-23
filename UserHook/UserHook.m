@@ -86,6 +86,14 @@ static UserHook * _sharedInstance;
     [UserHook sharedInstance].payloadHandler = payloadHandler;
 }
 
++(UIViewController *) topViewController {
+    
+    UIViewController * rootController = [UIApplication sharedApplication].keyWindow.rootViewController;
+    while (rootController.presentedViewController) rootController = rootController.presentedViewController;
+    
+    return rootController;
+}
+
 #pragma mark - feedback settings
 +(void) setFeedbackScreenTitle:(NSString *)feedbackScreenTitle {
     
@@ -422,9 +430,7 @@ static UserHook * _sharedInstance;
         }
         
         UINavigationController * navController = [[navClass alloc] initWithRootViewController:controller];
-        
-        UIViewController * rootController = [UIApplication sharedApplication].keyWindow.rootViewController;
-        
+        UIViewController * rootController = [UserHook topViewController];
         [rootController presentViewController:navController animated:YES completion:nil];
         
     });
@@ -455,7 +461,7 @@ static UserHook * _sharedInstance;
         
         UHMessageView * view = [UHMessageView createViewForMeta:meta];
         
-        UIViewController * rootController = [UIApplication sharedApplication].keyWindow.rootViewController;
+        UIViewController * rootController = [UserHook topViewController];
         view.frame = rootController.view.frame;
         [rootController.view addSubview:view];
         

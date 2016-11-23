@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.2.2 (2016-11-23)
+- Display message hook points on top most view controller
+
 ## v1.2.1 (2016-11-22)
 - Added completion handlers for updateSessionData, updateCustomFields, updatePurchasedItem
 - Added convenience method for displayStaticPage
