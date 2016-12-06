@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.2.3 (2016-12-06)
+- Ensure only one message view displays at a time
+- Exclude button "close" buttons from the interactions reports
+
 ## v1.2.2 (2016-11-23)
 - Display message hook points on top most view controller
 
