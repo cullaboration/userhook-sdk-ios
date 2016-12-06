@@ -40,18 +40,20 @@
 
 -(void) execute {
     
-    dispatch_async(dispatch_get_main_queue(), ^{
+    if ([UHMessageView canDisplay]) {
         
-        UHMessageView * messageView = [UHMessageView createViewForHookPoint:self];
-        UIViewController * rootController = [UserHook topViewController];
-        messageView.frame = rootController.view.frame;
-        [rootController.view addSubview:messageView];
-        
-        
-        [messageView showDialog];
-        
-    });
-    
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            UHMessageView * messageView = [UHMessageView createViewForHookPoint:self];
+            UIViewController * rootController = [UserHook topViewController];
+            messageView.frame = rootController.view.frame;
+            [rootController.view addSubview:messageView];
+            
+            
+            [messageView showDialog];
+            
+        });
+    }
     
 }
 

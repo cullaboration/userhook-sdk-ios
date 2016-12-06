@@ -22,6 +22,8 @@ typedef void(^UHMessageViewHandler)(UHMessageView * dialogView);
 -(void)showDialog;
 -(void)hideDialog;
 
++(BOOL) canDisplay;
+
 
 
 @end

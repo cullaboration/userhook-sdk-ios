@@ -461,12 +461,13 @@ static UserHook * _sharedInstance;
         
         UHMessageView * view = [UHMessageView createViewForMeta:meta];
         
-        UIViewController * rootController = [UserHook topViewController];
-        view.frame = rootController.view.frame;
-        [rootController.view addSubview:view];
-        
-        [view showDialog];
-        
+        if ([UHMessageView canDisplay]) {
+            UIViewController * rootController = [UserHook topViewController];
+            view.frame = rootController.view.frame;
+            [rootController.view addSubview:view];
+            
+            [view showDialog];
+        }
         
     });
     
@@ -486,7 +487,7 @@ static UserHook * _sharedInstance;
         
         UHHostedPageViewController * controller = [self createHostedPageViewController:slug];
         controller.title = title;
-
+        
         [self displayUHController:controller];
         
     });
