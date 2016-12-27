@@ -43,11 +43,10 @@
     
     
     _webView = [[UHWebView alloc] init];
-    _webView.delegate = self;
+    [_webView setWebViewDelegate:self];
     
     
     [self.view addSubview:_webView];
-    
     [_webView setTranslatesAutoresizingMaskIntoConstraints:NO];
     
     [self.view addConstraints:[NSLayoutConstraint
@@ -78,14 +77,10 @@
 -(void) clickedClose {
     
     if (self.navigationController) {
-        [self.navigationController dismissViewControllerAnimated:YES completion:^{
-            
-        }];
+        [self.navigationController dismissViewControllerAnimated:YES completion:nil];
     }
     else {
-        [self dismissViewControllerAnimated:YES completion:^{
-            
-        }];
+        [self dismissViewControllerAnimated:YES completion:nil];
     }
 }
 

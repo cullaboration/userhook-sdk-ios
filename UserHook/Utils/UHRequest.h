@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-
 @interface UHRequest : NSMutableURLRequest
 
 +(UHRequest *) requestWithPath:(NSString *)path httpMethod:(NSString *)method parameters:(NSDictionary *)parameters;
@@ -20,5 +19,7 @@
 +(BOOL) hasUserHookHeaders:(NSURLRequest *)request;
 +(UHRequest *) requestFromRequest:(NSURLRequest *) request;
 + (NSString *)parametersToQueryString:(NSDictionary *) parameters;
+
++(NSDictionary *) dataParamsToDictionary:(NSData *)data;
 
 @end

@@ -65,6 +65,7 @@
         
         if (payload) {
             for (NSString * key in [payload allKeys]) {
+                
                 NSLog(@"action key = %@, value = %@", key, [payload valueForKey:key]);
             }
         }

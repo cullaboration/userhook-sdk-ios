@@ -126,7 +126,7 @@ static BOOL displaying = false;
         [self createWebView];
         NSString * htmlContent = [[UHMessageTemplate sharedInstance] renderTemplate:self.meta];
         
-        [(UIWebView *)self.contentView loadHTMLString:htmlContent baseURL:[NSURL URLWithString:UH_HOST_URL]];
+        [(UHWebView *)self.contentView loadHTMLString:htmlContent baseURL:[NSURL URLWithString:UH_HOST_URL]];
 
         self.contentLoaded = YES;
         
@@ -237,11 +237,10 @@ static BOOL displaying = false;
     
     
     // create webview for message content
-    UIWebView * webView = [[UHWebView alloc] init];
-    webView.delegate = self;
-    webView.backgroundColor = [UIColor clearColor];
-    webView.opaque = NO;
-    
+    UHWebView * webView = [[UHWebView alloc] init];
+    [webView setWebViewDelegate:self];
+    [webView setScrollable:NO];
+    [webView setBackgroundTransparent];
     self.contentView = webView;
     
     self.contentView.translatesAutoresizingMaskIntoConstraints = NO;
@@ -254,8 +253,6 @@ static BOOL displaying = false;
     [self addConstraint:self.contentHeight];
     [self addConstraint:[NSLayoutConstraint constraintWithItem:self.contentView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0]];
     [self addConstraint:[NSLayoutConstraint constraintWithItem:self.contentView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0]];
-    
-    webView.scrollView.scrollEnabled = NO;
     
     _contentView.alpha = 0;
     

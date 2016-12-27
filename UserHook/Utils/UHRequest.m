@@ -15,6 +15,8 @@ static NSString * const UHApplicationKeyHeaderName = @"X-USERHOOK-APP-KEY";
 static NSString * const UHUserIdHeaderName = @"X-USERHOOK-USER-ID";
 static NSString * const UHUserKeyHeaderName = @"X-USERHOOK-USER-KEY";
 
+static NSString * const UHSdkHeaderName = @"X-USERHOOK-SDK";
+NSString * const UHUserAgentHeaderPrefix = @"ios-";
 
 
 static NSString * escapeString(NSString *unencodedString)
@@ -33,6 +35,7 @@ static NSString * escapeString(NSString *unencodedString)
 }
 
 
+
 @implementation UHRequest
 
 
@@ -47,11 +50,19 @@ static NSString * escapeString(NSString *unencodedString)
     UHRequest * urequest = [super requestWithURL:[request URL]];
     [urequest addUserHookHeaders];
     
+    
     urequest.HTTPMethod = request.HTTPMethod;
     
     if (request.HTTPBody) {
         urequest.HTTPBody = request.HTTPBody;
     }
+    
+    // add headers
+    NSDictionary * headers = [request allHTTPHeaderFields];
+    if ([headers valueForKey:@"Content-Type"]) {
+        [urequest setValue:[headers valueForKey:@"Content-Type"] forHTTPHeaderField:@"Content-Type"];
+    }
+    
     return urequest;
 
 }
@@ -113,7 +124,16 @@ static NSString * escapeString(NSString *unencodedString)
         [self setValue:[UHUser userId] forHTTPHeaderField:UHUserIdHeaderName];
         [self setValue:[UHUser key] forHTTPHeaderField:UHUserKeyHeaderName];
     }
+    
+    // add user agent header
+    [self setValue:[NSString stringWithFormat:@"%@%@", UHUserAgentHeaderPrefix,  UH_SDK_VERSION] forHTTPHeaderField:UHSdkHeaderName];
 
+}
+
++(BOOL) userAgentHeaderIsCorrect:(NSURLRequest *) request {
+    NSDictionary * headers = [request allHTTPHeaderFields];
+    
+    return [headers valueForKey:@"User-Agent"] && [[headers valueForKey:@"User-Agent"] hasPrefix:UHUserAgentHeaderPrefix];
 }
 
 + (NSString *)parametersToQueryString:(NSDictionary *) parameters
@@ -143,7 +163,36 @@ static NSString * escapeString(NSString *unencodedString)
 +(BOOL) hasUserHookHeaders:(NSURLRequest *) request {
     NSDictionary * headers = [request allHTTPHeaderFields];
     return ([headers valueForKey:UHApplicationIdHeaderName] != nil && [headers valueForKey:UHApplicationKeyHeaderName] != nil
-        && [headers valueForKey:UHUserKeyHeaderName] != nil && [headers valueForKey:UHUserIdHeaderName] != nil);
+        && [headers valueForKey:UHUserKeyHeaderName] != nil && [headers valueForKey:UHUserIdHeaderName] != nil
+          && [headers valueForKey:UHSdkHeaderName] != nil   );
 }
 
+
++(NSDictionary *) dataParamsToDictionary:(NSData *)data {
+    
+    NSString * paramsString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    paramsString = [self unescapeString:paramsString];
+    
+    NSMutableDictionary * dict = [NSMutableDictionary dictionary];
+    
+    for (NSString * pairString in [paramsString componentsSeparatedByString:@"&"]) {
+        
+        NSArray * pair = [pairString componentsSeparatedByString:@"="];
+        
+        if ([pair count] < 2) {
+            continue;
+        }
+        
+        // add to dictionary
+        [dict setValue:pair[1] forKey:pair[0]];
+        
+    }
+    
+    return dict;
+}
+
++(NSString *) unescapeString:(NSString *) string {
+    
+    return [[string stringByReplacingOccurrencesOfString:@"+" withString:@" "] stringByRemovingPercentEncoding];
+}
 @end

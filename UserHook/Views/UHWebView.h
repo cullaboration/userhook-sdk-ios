@@ -9,8 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <WebKit/WebKit.h>
 
-@interface UHWebView : UIWebView<UIWebViewDelegate>
+@interface UHWebView : UIView<UIWebViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
+- (void) setWebViewDelegate:(id <UIWebViewDelegate>) delegate;
+- (void)loadRequest:(NSURLRequest *)request;
+- (void)loadHTMLString:(NSString *)string baseURL:(NSURL *)baseURL;
 
-
+-(void) setScrollable:(BOOL) scrollable;
+-(void) setBackgroundTransparent;
 @end
