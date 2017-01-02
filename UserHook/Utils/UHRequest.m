@@ -16,7 +16,7 @@ static NSString * const UHUserIdHeaderName = @"X-USERHOOK-USER-ID";
 static NSString * const UHUserKeyHeaderName = @"X-USERHOOK-USER-KEY";
 
 static NSString * const UHSdkHeaderName = @"X-USERHOOK-SDK";
-NSString * const UHUserAgentHeaderPrefix = @"ios-";
+NSString * const UHSdkHeaderPrefix = @"ios-";
 
 
 static NSString * escapeString(NSString *unencodedString)
@@ -125,15 +125,9 @@ static NSString * escapeString(NSString *unencodedString)
         [self setValue:[UHUser key] forHTTPHeaderField:UHUserKeyHeaderName];
     }
     
-    // add user agent header
-    [self setValue:[NSString stringWithFormat:@"%@%@", UHUserAgentHeaderPrefix,  UH_SDK_VERSION] forHTTPHeaderField:UHSdkHeaderName];
+    // add sdk header
+    [self setValue:[NSString stringWithFormat:@"%@%@", UHSdkHeaderPrefix,  UH_SDK_VERSION] forHTTPHeaderField:UHSdkHeaderName];
 
-}
-
-+(BOOL) userAgentHeaderIsCorrect:(NSURLRequest *) request {
-    NSDictionary * headers = [request allHTTPHeaderFields];
-    
-    return [headers valueForKey:@"User-Agent"] && [[headers valueForKey:@"User-Agent"] hasPrefix:UHUserAgentHeaderPrefix];
 }
 
 + (NSString *)parametersToQueryString:(NSDictionary *) parameters

@@ -119,17 +119,9 @@
         // see if request has the user hook headers
         else if (![UHRequest hasUserHookHeaders:request]) {
             
-            // remember the content type, this is needed if we are sending multi-part form data
-            // other wise the content-type would be reset when we 
-            //NSDictionary * headers = [request allHTTPHeaderFields];
-            //NSString * contentType = [headers valueForKey:@"Content-Type"];
-            
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                 dispatch_async(dispatch_get_main_queue(), ^{
                     UHRequest* urequest = [UHRequest requestFromRequest:request];
-                    
-                    // reset content type
-                    //[urequest setValue:contentType forHTTPHeaderField:@"Content-Type"];
                     
                     // reload the new request with the user hook headers
                     [self.webView loadRequest:urequest];
@@ -165,6 +157,7 @@
             self.attachmentFieldName = nil;
             self.attachment = nil;
             
+            // reset file picker on webpage
             [self.webView stringByEvaluatingJavaScriptFromString:@"javascript:resetUpload();"];
             
         }
@@ -194,7 +187,7 @@
     // get image and downsize a bit
     [[PHImageManager defaultManager] requestImageForAsset:asset targetSize:CGSizeMake(600, 800) contentMode:PHImageContentModeAspectFit options:options resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
     
-        self.attachment = UIImageJPEGRepresentation(result, 60);
+        self.attachment = UIImageJPEGRepresentation(result, .6);
         self.attachmentMimeType = @"image/jpeg";
         
         

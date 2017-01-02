@@ -14,6 +14,7 @@
 #import "UHApplication.h"
 #import "UHMessageView.h"
 #import "UHMessageMeta.h"
+#import "UHNavigationController.h"
 
 @interface UserHook()
 
@@ -426,7 +427,7 @@ static UserHook * _sharedInstance;
             navClass = NSClassFromString([UserHook sharedInstance].navControllerClassName);
         }
         else {
-            navClass = [UINavigationController class];
+            navClass = [UHNavigationController class];
         }
         
         UINavigationController * navController = [[navClass alloc] initWithRootViewController:controller];
