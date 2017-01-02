@@ -1,6 +1,6 @@
 # Changelog
 
-## v1.3.1 (2016-01-02)
+## v1.3.1 (2017-01-02)
 - Added file uploads to feedback form
 
 ## v1.2.3 (2016-12-06)
