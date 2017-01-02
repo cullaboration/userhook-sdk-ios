@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.3.1 (2016-01-02)
+- Added file uploads to feedback form
+
 ## v1.2.3 (2016-12-06)
 - Ensure only one message view displays at a time
 - Exclude button "close" buttons from the interactions reports
