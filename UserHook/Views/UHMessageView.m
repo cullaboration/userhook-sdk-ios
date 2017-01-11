@@ -300,10 +300,10 @@ static BOOL displaying = false;
         return;
     }
     
-    displaying = YES;
     
     if (self.contentLoaded) {
         
+        displaying = YES;
         _overlay.alpha = 0;
         _contentView.alpha = 0;
         

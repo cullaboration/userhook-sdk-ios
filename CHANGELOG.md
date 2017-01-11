@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.3.2 (2016-01-11)
+- Fixed bug that would cause screen to "freeze" when executing message hook point
+
 ## v1.3.1 (2016-01-02)
 - Added file uploads to feedback form
 
