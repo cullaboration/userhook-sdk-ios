@@ -1,5 +1,9 @@
 # Changelog
 
+## v.2.0.0. (2017-03-27)
+- Added events to hook points
+- Added Net Promoter Score prompts
+
 ## v1.3.2 (2017-01-11)
 - Fixed bug that would cause screen to "freeze" when executing message hook point
 
