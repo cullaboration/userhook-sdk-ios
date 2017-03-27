@@ -13,7 +13,7 @@
 @property (strong, nonatomic) UIWindow *window;
 
 
--(void) loadHookpoints;
+-(void) loadHookpoints:(NSString *) event;
 
 @end
 

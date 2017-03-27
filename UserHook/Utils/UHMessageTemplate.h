@@ -17,6 +17,6 @@
 
 -(BOOL) hasTemplate:(NSString *) name;
 
--(NSString *) renderTemplate:(UHMessageMeta *) meta;
+-(NSString *) renderTemplate:(UHMessageMeta *) meta parameters:(NSDictionary *) parameters ;
 
 @end

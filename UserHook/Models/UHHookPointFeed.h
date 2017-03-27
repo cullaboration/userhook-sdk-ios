@@ -6,14 +6,11 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-#import "UHHookPoint.h"
-#import "UHMessageMeta.h"
+#import "UHFeed.h"
+#import "UHHookPointModel.h"
 
-@interface UHHookPointMessage : UHHookPoint
+@interface UHHookPointFeed : UHFeed
 
-
-@property (nonatomic, strong) UHMessageMeta * meta;
-
--(void) addAndShowView;
+@property (nonatomic, strong) UHHookPointModel<Optional> * hookpoint;
 
 @end

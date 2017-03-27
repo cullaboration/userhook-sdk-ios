@@ -6,14 +6,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-#import "UHHookPoint.h"
-#import "UHMessageMeta.h"
+#import "UHHookPointModel.h"
 
-@interface UHHookPointMessage : UHHookPoint
-
-
-@property (nonatomic, strong) UHMessageMeta * meta;
-
--(void) addAndShowView;
+@implementation UHHookPointModel
 
 @end

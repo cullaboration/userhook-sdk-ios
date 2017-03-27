@@ -16,6 +16,7 @@
 #import <UserHook/UHMessageTemplate.h>
 #import <OCMock/OCMock.h>
 
+
 @interface UHOperationTest : XCTestCase
 
 @end
@@ -162,7 +163,7 @@
     
     
     // create parameters for request
-    NSDictionary * parameters = [NSDictionary dictionaryWithObjectsAndKeys:[UHUser userId], @"user", nil];
+    NSDictionary * parameters = [NSDictionary dictionaryWithObjectsAndKeys:[UHUser userId], @"user", @"event_name",@"event", nil];
     
     // mock request
     id requestMock = OCMClassMock([UHRequest class]);
@@ -171,7 +172,7 @@
     
     // make operation call
     UHOperation * operation = [[UHOperation alloc] init];
-    [operation fetchHookpoint:nil];
+    [operation fetchHookpoint:@"event_name" handler:nil];
     
     
     OCMVerifyAll(requestMock);
@@ -413,7 +414,8 @@
     
     // mock request
     id requestMock = OCMClassMock([UHRequest class]);
-    OCMExpect([requestMock getRequestWithPath:@"https://formhost.userhook.com/message/templates"  parameters:nil]);
+    NSString * hostUrl = [NSString stringWithFormat:@"%@message/templates", UH_HOST_URL];
+    OCMExpect([requestMock getRequestWithPath:hostUrl  parameters:nil]);
     
     
     // make operation call

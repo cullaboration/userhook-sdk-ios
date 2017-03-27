@@ -6,14 +6,11 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-#import "UHHookPoint.h"
-#import "UHMessageMeta.h"
+#import "UHHookPointMessage.h"
 
-@interface UHHookPointMessage : UHHookPoint
+extern NSString * const UHHookPointNPSDisplayType;
+extern NSString * const UHHookPointNPSFeedbackDisplayType;
 
-
-@property (nonatomic, strong) UHMessageMeta * meta;
-
--(void) addAndShowView;
+@interface UHHookPointNPS : UHHookPointMessage
 
 @end

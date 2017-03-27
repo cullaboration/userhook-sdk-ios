@@ -14,6 +14,8 @@ static NSString * const UHMessageTypeImage = @"image";
 static NSString * const UHMessageTypeTwoButtons = @"twobuttons";
 static NSString * const UHMessageTypeOneButton = @"onebutton";
 static NSString * const UHMessageTypeNoButtons = @"nobuttons";
+static NSString * const UHMessageTypeNps = @"nps";
+static NSString * const UHMessageTypeNpsFeedback = @"nps_feedback";
 
 
 static NSString * const UHMessageClickClose = @"close";
@@ -32,6 +34,12 @@ static NSString * const UHMessageClickSurvey = @"survey";
 @property (nonatomic, strong) NSString * body;
 @property (nonatomic, strong) UHMessageMetaButton * button1;
 @property (nonatomic, strong) UHMessageMetaButton * button2;
+
+// used by NPS prompts
+@property (nonatomic, strong) NSString * feedback_body;
+@property (nonatomic, strong) NSString * feedback;
+@property (nonatomic, strong) NSString * least;
+@property (nonatomic, strong) NSString * most;
 
 -(NSDictionary *) toQueryParams;
 

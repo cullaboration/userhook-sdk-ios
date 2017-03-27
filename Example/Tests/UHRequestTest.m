@@ -43,7 +43,9 @@
     
     UHRequest * request = [UHRequest getRequestWithPath:@"test" parameters:@{@"one":@"1",@"two":@"2"}];
     
-    XCTAssertEqualObjects([[request URL] absoluteString] ,@"https://api.userhook.com/test?one=1&two=2");
+    NSString * hostUrl = [NSString stringWithFormat:@"%@test?one=1&two=2", UH_API_URL];
+    
+    XCTAssertEqualObjects([[request URL] absoluteString] ,hostUrl);
     XCTAssertEqualObjects(request.HTTPMethod, @"GET");
     
     NSDictionary * headers = [request allHTTPHeaderFields];
@@ -59,9 +61,12 @@
 
 -(void) testPostRequest {
     
+    NSString * hostUrl = [NSString stringWithFormat:@"%@test", UH_API_URL];
+    
+    
     UHRequest * request = [UHRequest postRequestWithPath:@"test" parameters:@{@"one":@"1",@"two":@"2"}];
     
-    XCTAssertEqualObjects([[request URL] absoluteString] ,@"https://api.userhook.com/test");
+    XCTAssertEqualObjects([[request URL] absoluteString] ,hostUrl);
     XCTAssertEqualObjects(request.HTTPMethod, @"POST");
     
     // parameters should be stored in the request body

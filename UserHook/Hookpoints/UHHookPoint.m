@@ -10,23 +10,39 @@
 #import "UHHookPointMessage.h"
 #import "UHHookPointSurvey.h"
 #import "UHHookPointAction.h"
+#import "UHHookPointNPS.h"
 
 @implementation UHHookPoint
 
+NSString * const UHHookPointTypeMessage = @"message";
+NSString * const UHHookPointTypeAction = @"action";
+NSString * const UHHookPointTypeSurvey = @"survey";
+NSString * const UHHookPointTypeNPS = @"nps";
 
-+(id) createWithData:(NSDictionary *)data {
+
+NSString * const UHHookPointTypeActionPrompt = @"action prompt";
+NSString * const UHHookPointTypeRatingPrompt = @"rating prompt";
+
++(id) createWithModel:(UHHookPointModel *)model {
     
     UHHookPoint * object;
     
+        if ([model.type isEqualToString:UHHookPointTypeMessage]) {
+            object = [[UHHookPointMessage alloc] initWithModel:model];
+        }
+        else if ([model.type isEqualToString:UHHookPointTypeNPS]) {
+            object = [[UHHookPointNPS alloc] initWithModel:model];
+        }
+        else if ([model.type isEqualToString:UHHookPointTypeAction]) {
+            object = [[UHHookPointAction alloc] initWithModel:model];
+        }
+        
+        else if ([model.type isEqualToString:UHHookPointTypeSurvey]) {
+            object = [[UHHookPointSurvey alloc] initWithModel:model];
+        }
     
-    if ([data valueForKey:@"hookpoint"]) {
-        
-        
-        NSDictionary * hookpoint = [data valueForKey:@"hookpoint"];
-        NSString * type = [hookpoint valueForKey:@"type"];
-        
         // backporting for version 1.0
-        if ([type isEqualToString:@"rating prompt"]) {
+        else if ([model.type isEqualToString:UHHookPointTypeRatingPrompt]) {
             
             UHMessageMeta * uhmeta = [[UHMessageMeta alloc] init];
             uhmeta.displayType = UHMessageTypeTwoButtons;
@@ -37,35 +53,27 @@
             button1.click = UHMessageClickRate;
             button2.click = UHMessageClickClose;
             
-            NSDictionary * hookpoint = [data valueForKey:@"hookpoint"];
-            NSDictionary * meta = [hookpoint valueForKey:@"meta"];
-            if (meta) {
+            if (model.meta) {
                 
-                if ([meta valueForKey:@"negativeButtonLabel"]) {
-                    button2.title = [meta valueForKey:@"negativeButtonLabel"];
+                if ([model.meta valueForKey:@"negativeButtonLabel"]) {
+                    button2.title = [model.meta valueForKey:@"negativeButtonLabel"];
                 }
-                if ([meta valueForKey:@"positiveButtonLabel"]) {
-                    button1.title = [meta valueForKey:@"positiveButtonLabel"];
+                if ([model.meta valueForKey:@"positiveButtonLabel"]) {
+                    button1.title = [model.meta valueForKey:@"positiveButtonLabel"];
                 }
-                if ([meta valueForKey:@"promptMessage"]) {
-                    uhmeta.body = [meta valueForKey:@"promptMessage"];
+                if ([model.meta valueForKey:@"promptMessage"]) {
+                    uhmeta.body = [model.meta valueForKey:@"promptMessage"];
                 }
             }
             
             uhmeta.button1 = button1;
             uhmeta.button2 = button2;
             
-            object = [[UHHookPointMessage alloc] initWithData:data];
+            object = [[UHHookPointMessage alloc] initWithModel:model];
             ((UHHookPointMessage *)object).meta = uhmeta;
         }
-        else if ([type isEqualToString:[UHHookPointMessage type]]) {
-            object = [[UHHookPointMessage alloc] initWithData:data];
-        }
-        else if ([type isEqualToString:[UHHookPointAction type]]) {
-            object = [[UHHookPointAction alloc] initWithData:data];
-        }
         // backporting for version 1.0
-        else if ([type isEqualToString:@"action prompt"]) {
+        else if ([model.type isEqualToString:UHHookPointTypeActionPrompt]) {
             
             UHMessageMeta * uhmeta = [[UHMessageMeta alloc] init];
             uhmeta.displayType = UHMessageTypeTwoButtons;
@@ -76,21 +84,19 @@
             button1.click = UHMessageClickAction;
             button2.click = UHMessageClickClose;
             
-            NSDictionary * hookpoint = [data valueForKey:@"hookpoint"];
-            NSDictionary * meta = [hookpoint valueForKey:@"meta"];
-            if (meta) {
+            if (model.meta) {
                 
-                if ([meta valueForKey:@"negativeButtonLabel"]) {
-                    button2.title = [meta valueForKey:@"negativeButtonLabel"];
+                if ([model.meta valueForKey:@"negativeButtonLabel"]) {
+                    button2.title = [model.meta valueForKey:@"negativeButtonLabel"];
                 }
-                if ([meta valueForKey:@"positiveButtonLabel"]) {
-                    button1.title = [meta valueForKey:@"positiveButtonLabel"];
+                if ([model.meta valueForKey:@"positiveButtonLabel"]) {
+                    button1.title = [model.meta valueForKey:@"positiveButtonLabel"];
                 }
-                if ([meta valueForKey:@"promptMessage"]) {
-                    uhmeta.body = [meta valueForKey:@"promptMessage"];
+                if ([model.meta valueForKey:@"promptMessage"]) {
+                    uhmeta.body = [model.meta valueForKey:@"promptMessage"];
                 }
-                if ([meta valueForKey:@"payload"]) {
-                    button1.payload = [meta valueForKey:@"payload"];
+                if ([model.meta valueForKey:@"payload"]) {
+                    button1.payload = [model.meta valueForKey:@"payload"];
                 }
             }
             
@@ -98,49 +104,30 @@
             uhmeta.button1 = button1;
             uhmeta.button2 = button2;
             
-            object = [[UHHookPointMessage alloc] initWithData:data];
+            object = [[UHHookPointMessage alloc] initWithModel:model];
             ((UHHookPointMessage *)object).meta = uhmeta;
             
         }
-        else if ([type isEqualToString:[UHHookPointSurvey type]]) {
-            object = [[UHHookPointSurvey alloc] initWithData:data];
-        }
         else  {
-            object = [[UHHookPoint alloc] initWithData:data];
+            object = [[UHHookPoint alloc] initWithModel:model];
         }
         
-    }
+    
     
     return object;
     
 }
 
-+(NSString *) type {
-    return @"hookpoint";
-}
 
 -(void) execute {
     // override in subclass
 }
 
--(id) initWithData:(NSDictionary *)data {
+-(id) initWithModel:(UHHookPointModel *) model {
     self = [super init];
     
-    NSDictionary * hookpoint = [data valueForKey:@"hookpoint"];
-    
-    _id = [hookpoint valueForKey:@"id"];
-    _name = [hookpoint valueForKey:@"name"];
-    _type = [hookpoint valueForKey:@"type"];
-    
-    
-    if ([data valueForKey:@"application"]) {
-        NSDictionary * application = [data valueForKey:@"application"];
-        
-            _applicationName = [application valueForKey:@"name"];
-            _itunesId = [application valueForKey:@"itunes_id"];
-        
-    }
-    
+    _id = model.id;
+    _type = model.type;
     
     
     return self;

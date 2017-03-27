@@ -105,6 +105,8 @@ static BOOL displaying = false;
  Make request to server where the content of the message will be rendered into html.
  We make this request as a network call, instead of directly in the webview, to make sure the content
  is loaded completely before trying to display the message view to the user.
+ 
+ If a cache of the message template is available, the cache is used and not network call is made.
  */
 
 -(void) loadMessage:(NSDictionary *) params {
@@ -124,7 +126,7 @@ static BOOL displaying = false;
     else if ([[UHMessageTemplate sharedInstance] hasTemplate:self.meta.displayType]) {
         
         [self createWebView];
-        NSString * htmlContent = [[UHMessageTemplate sharedInstance] renderTemplate:self.meta];
+        NSString * htmlContent = [[UHMessageTemplate sharedInstance] renderTemplate:self.meta parameters:params];
         
         [(UHWebView *)self.contentView loadHTMLString:htmlContent baseURL:[NSURL URLWithString:UH_HOST_URL]];
 
@@ -234,7 +236,10 @@ static BOOL displaying = false;
 
 -(void) createWebView {
     
-    
+    // only create the view one time
+    if (self.contentView) {
+        return;
+    }
     
     // create webview for message content
     UHWebView * webView = [[UHWebView alloc] init];
@@ -246,7 +251,7 @@ static BOOL displaying = false;
     self.contentView.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:self.contentView];
     
-    self.contentWidth = [NSLayoutConstraint constraintWithItem:self.contentView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeWidth multiplier:1.0 constant:280];
+    self.contentWidth = [NSLayoutConstraint constraintWithItem:self.contentView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeWidth multiplier:1.0 constant:[UserHook sharedInstance].dialogWidth];
     // start with a small height so we can calculate the height of the content using the webview scroll size
     self.contentHeight = [NSLayoutConstraint constraintWithItem:self.contentView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeHeight multiplier:1.0 constant:10];
     [self addConstraint:self.contentWidth];
@@ -377,6 +382,64 @@ static BOOL displaying = false;
         
         if ([[request.URL host] isEqualToString:@"close"]) {
             [self hideDialog];
+        }
+        else if ([[request.URL host] isEqualToString:@"form"]) {
+            
+            NSString * path = [request.URL path];
+            // intercept form posts and handle them directly
+            
+            NSURLComponents * components = [NSURLComponents componentsWithURL:request.URL resolvingAgainstBaseURL:false];
+            NSMutableDictionary * params = [NSMutableDictionary new];
+            
+            for (NSURLQueryItem * item in components.queryItems) {
+                [params setValue:item.value forKey:item.name];
+            }
+            
+            if ([path hasPrefix:@"/"]) {
+                path = [path substringFromIndex:1];
+            }
+            
+            UHRequest * uhRequest = [UHRequest requestWithUrl:[NSString stringWithFormat:@"%@%@", UH_HOST_URL, path] httpMethod:@"POST" parameters:params];
+            
+            NSURLSessionTask * task = [[NSURLSession sharedSession] dataTaskWithRequest:uhRequest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+                
+                if (data) {
+                    NSString * responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+                    
+                    NSString * js = [NSString stringWithFormat:@"afterFormSubmit('%@');", responseString];
+                    
+                    // execute javascript function
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [webView stringByEvaluatingJavaScriptFromString:js];
+                    });
+                    
+                }
+                
+            }];
+            
+            [task resume];
+            
+            
+        }
+        else if ([[request.URL host] isEqualToString:@"reload"]) {
+            
+            NSMutableDictionary * params = [NSMutableDictionary dictionary];
+            if (self.hookpoint) {
+                [params setValue:self.hookpoint.id forKey:@"id"];
+            }
+            
+            // find any modified query parameters
+            NSURLComponents * urlComponents = [NSURLComponents componentsWithURL:request.URL resolvingAgainstBaseURL:NO];
+            NSArray * queryItems = urlComponents.queryItems;
+            
+            for (NSURLQueryItem * item in queryItems) {
+                
+                [self.meta setValue:item.value forKeyPath:item.name];
+            }
+            
+            // reload content in message view
+            [self loadMessage:params];
+            
         }
         else {
             

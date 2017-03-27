@@ -27,6 +27,12 @@
 		1E2A24A52433917446348A64D586073D /* OCMBlockCaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 45CA2A3F4DD43C53B9BADC4D527716CA /* OCMBlockCaller.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1F4D5DB6CB3F389BEB36A2835B94C6D5 /* OCMock.h in Headers */ = {isa = PBXBuildFile; fileRef = D096AE6539D42259B5D30AFF97BE90B7 /* OCMock.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		201B11899CBDD25C4DDC1D72B8ACC68E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B05266FE0AB404EAC61D0CE56372E35D /* UIKit.framework */; };
+		22A508AB1E81969C00B947B4 /* UHHookPointNPS.h in Headers */ = {isa = PBXBuildFile; fileRef = 222528341E81946800D19768 /* UHHookPointNPS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22A508AC1E8196A000B947B4 /* UHHookPointNPS.m in Sources */ = {isa = PBXBuildFile; fileRef = 222528351E81946800D19768 /* UHHookPointNPS.m */; };
+		22A508B51E81BEA900B947B4 /* UHHookPointFeed.h in Headers */ = {isa = PBXBuildFile; fileRef = 22A508AD1E81BC9300B947B4 /* UHHookPointFeed.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22A508B61E81BEAE00B947B4 /* UHHookPointFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A508AE1E81BC9300B947B4 /* UHHookPointFeed.m */; };
+		22A508B71E81BEB200B947B4 /* UHHookPointModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 22A508B11E81BDCC00B947B4 /* UHHookPointModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22A508B81E81BEB500B947B4 /* UHHookPointModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A508B21E81BDCC00B947B4 /* UHHookPointModel.m */; };
 		22A5CD6F1E09B258001703BD /* UHNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 22A5CD6D1E09B258001703BD /* UHNavigationController.h */; };
 		22A5CD701E09B258001703BD /* UHNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A5CD6E1E09B258001703BD /* UHNavigationController.m */; };
 		27EB289F17DF6841D8D4581C5ED5FBD1 /* JSONModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48FFF1693B823D0F4709BFE77CBDCE1C /* JSONModel.framework */; };
@@ -227,6 +233,12 @@
 		1C28806E0BECB563FF0C47FF8D25319A /* JSONModel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JSONModel-prefix.pch"; sourceTree = "<group>"; };
 		1D8031778531418A58074E5EA8222D55 /* JSONKeyMapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONKeyMapper.h; path = JSONModel/JSONModelTransformations/JSONKeyMapper.h; sourceTree = "<group>"; };
 		20503690AC917BE1134FD82AB4A2063E /* NSObject+OCMAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+OCMAdditions.m"; path = "Source/OCMock/NSObject+OCMAdditions.m"; sourceTree = "<group>"; };
+		222528341E81946800D19768 /* UHHookPointNPS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UHHookPointNPS.h; sourceTree = "<group>"; };
+		222528351E81946800D19768 /* UHHookPointNPS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UHHookPointNPS.m; sourceTree = "<group>"; };
+		22A508AD1E81BC9300B947B4 /* UHHookPointFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UHHookPointFeed.h; sourceTree = "<group>"; };
+		22A508AE1E81BC9300B947B4 /* UHHookPointFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UHHookPointFeed.m; sourceTree = "<group>"; };
+		22A508B11E81BDCC00B947B4 /* UHHookPointModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UHHookPointModel.h; sourceTree = "<group>"; };
+		22A508B21E81BDCC00B947B4 /* UHHookPointModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UHHookPointModel.m; sourceTree = "<group>"; };
 		22A5CD6D1E09B258001703BD /* UHNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UHNavigationController.h; sourceTree = "<group>"; };
 		22A5CD6E1E09B258001703BD /* UHNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UHNavigationController.m; sourceTree = "<group>"; };
 		277795B36F5FE5A988C8729B33C0D8B4 /* Pods-UserHook_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-UserHook_Example.modulemap"; sourceTree = "<group>"; };
@@ -474,6 +486,10 @@
 				76070341D17FC4062A311579FD8AE07D /* UHSessionFeed.m */,
 				948A65A6DF98A6A9075DE82E8E1E076E /* UHTemplatesFeed.h */,
 				3C1147CDF2CE20B7AE7B3B4F531D4AFE /* UHTemplatesFeed.m */,
+				22A508AD1E81BC9300B947B4 /* UHHookPointFeed.h */,
+				22A508AE1E81BC9300B947B4 /* UHHookPointFeed.m */,
+				22A508B11E81BDCC00B947B4 /* UHHookPointModel.h */,
+				22A508B21E81BDCC00B947B4 /* UHHookPointModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -651,6 +667,8 @@
 				BA818D7DFCA9F8AD3E471219BB6EC4EB /* UHHookPointMessage.m */,
 				0215BE2F8D2FBB37AD7913A6173252D4 /* UHHookPointSurvey.h */,
 				3C4B613458651DE640626A5EB180F573 /* UHHookPointSurvey.m */,
+				222528341E81946800D19768 /* UHHookPointNPS.h */,
+				222528351E81946800D19768 /* UHHookPointNPS.m */,
 			);
 			path = Hookpoints;
 			sourceTree = "<group>";
@@ -833,8 +851,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3716D97B5B6529D205280ED51A4D4341 /* UHApplication.h in Headers */,
+				22A508B51E81BEA900B947B4 /* UHHookPointFeed.h in Headers */,
 				5B53FAB7C01C3CCFC169FC5465DE2A57 /* UHDeviceInfo.h in Headers */,
 				28D8BE332B877A76602BCC1C8A28C89C /* UHFeed.h in Headers */,
+				22A508AB1E81969C00B947B4 /* UHHookPointNPS.h in Headers */,
 				01C983B241D966BA1DA8ADA6918F1297 /* UHHandlers.h in Headers */,
 				DA8D931F3E6C60680A4EB03351539534 /* UHHookPoint.h in Headers */,
 				3B149C1B8149151C49BA4201F5D915F2 /* UHHookPointAction.h in Headers */,
@@ -844,6 +864,7 @@
 				2AFCF8B2A0DEBA19D29C7E116AEAD5C5 /* UHMessageMeta.h in Headers */,
 				F4154381120690044F270DE47EB0D70A /* UHMessageTemplate.h in Headers */,
 				C7D8A52146BCB71E2ECB4F6A107A086B /* UHMessageView.h in Headers */,
+				22A508B71E81BEB200B947B4 /* UHHookPointModel.h in Headers */,
 				7FE6963C15CF181E19E49263CA9C3920 /* UHOperation.h in Headers */,
 				3B0ACAE137B9F462D89633C9D30823B5 /* UHPage.h in Headers */,
 				CD7A0F0E0EC4C100DD55DD1692E4884B /* UHPagesFeed.h in Headers */,
@@ -1032,10 +1053,13 @@
 				0A6A584C83AF19A09EE0615080FACE58 /* UHPushFeed.m in Sources */,
 				CD2108119C5459BA0C4FDD5B5C2054D5 /* UHRequest.m in Sources */,
 				7AA48140F2023CF5575ED25FA71404B4 /* UHSessionFeed.m in Sources */,
+				22A508B81E81BEB500B947B4 /* UHHookPointModel.m in Sources */,
 				857E953DC28E3B5E581BBB170B2D999E /* UHTemplatesFeed.m in Sources */,
 				F29C2E313F6B0EF3CB0425C4A3939634 /* UHUser.m in Sources */,
+				22A508AC1E8196A000B947B4 /* UHHookPointNPS.m in Sources */,
 				F1380FE5E6E808DA3A0FC8612DC55E07 /* UHWebView.m in Sources */,
 				02DE2E4B15EB9D75BB86AFA445D3E696 /* UserHook-dummy.m in Sources */,
+				22A508B61E81BEAE00B947B4 /* UHHookPointFeed.m in Sources */,
 				9F3310F787CA4DB86CA674F0D7260481 /* UserHook.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

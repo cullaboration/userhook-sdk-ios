@@ -34,7 +34,7 @@
 
 - (IBAction)clickedReloadHookpoints:(id)sender {
     
-    [((AppDelegate *)[UIApplication sharedApplication].delegate) loadHookpoints];
+    [((AppDelegate *)[UIApplication sharedApplication].delegate) loadHookpoints:@"force_reload"];
 }
 
 -(void) viewWillAppear:(BOOL)animated {

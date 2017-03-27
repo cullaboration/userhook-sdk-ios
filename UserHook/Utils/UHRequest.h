@@ -11,6 +11,7 @@
 @interface UHRequest : NSMutableURLRequest
 
 +(UHRequest *) requestWithPath:(NSString *)path httpMethod:(NSString *)method parameters:(NSDictionary *)parameters;
++(UHRequest *) requestWithUrl:(NSString *)url httpMethod:(NSString *)method parameters:(NSDictionary *)parameters;
 
 +(UHRequest *) getRequestWithPath:(NSString *)path parameters:(NSDictionary *)parameters;
 +(UHRequest *) postRequestWithPath:(NSString *)path parameters:(NSDictionary *)parameters;

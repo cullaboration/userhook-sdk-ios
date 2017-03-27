@@ -12,20 +12,17 @@
 
 @implementation UHHookPointSurvey
 
-+(NSString *) type {
-    return @"survey";
-}
 
--(id) initWithData:(NSDictionary *)data {
-    self = [super initWithData:data];
+-(id) initWithModel:(UHHookPointModel *)model {
+    self = [super initWithModel:model];
     
     
-    if ([data valueForKeyPath:@"hookpoint.meta.survey"]) {
-        _surveyId = [data valueForKeyPath:@"hookpoint.meta.survey"];
+    if (model.meta && [model.meta valueForKeyPath:@"survey"]) {
+        _surveyId = [model.meta valueForKeyPath:@"survey"];
     }
     
-    if ([data valueForKeyPath:@"hookpoint.meta.publicTitle"]) {
-        _publicTitle = [data valueForKeyPath:@"hookpoint.meta.publicTitle"];
+    if (model.meta && [model.meta valueForKeyPath:@"publicTitle"]) {
+        _publicTitle = [model.meta valueForKeyPath:@"publicTitle"];
     }
     
     return  self;

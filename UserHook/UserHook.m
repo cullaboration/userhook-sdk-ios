@@ -41,6 +41,8 @@ static UserHook * _sharedInstance;
         _sessionStartTime = CFAbsoluteTimeGetCurrent();
         _backgroundTime = CFAbsoluteTimeGetCurrent();
         
+        _dialogWidth = 300;
+        
         _promptNibName = @"UHPromptView";
         
         UH_LOG(@"UserHook initialized");
@@ -175,10 +177,10 @@ static UserHook * _sharedInstance;
     [op updateSessionData:data handler:handler];
 }
 
-+(void) fetchHookPoint:(UHHookPointHandler)handler {
++(void) fetchHookPoint:(NSString *) event handler:(UHHookPointHandler)handler {
     UH_LOG(@"loading hookpoint");
     UHOperation * op = [[UHOperation alloc] init];
-    [op fetchHookpoint:handler];
+    [op fetchHookpoint:event handler:handler];
 }
 
 +(void) trackHookPointDisplay:(UHHookPoint *) hookPoint {

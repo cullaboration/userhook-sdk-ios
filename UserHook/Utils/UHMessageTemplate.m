@@ -44,7 +44,7 @@ static UHMessageTemplate * _sharedInstance;
     return [self.cache objectForKey:name] != nil;
 }
 
--(NSString *) renderTemplate:(UHMessageMeta *) meta {
+-(NSString *) renderTemplate:(UHMessageMeta *) meta parameters:(NSDictionary *) parameters {
     
     NSString * html = [self.cache objectForKey:meta.displayType];
     
@@ -63,6 +63,22 @@ static UHMessageTemplate * _sharedInstance;
     
     if (meta.body) {
         html = [html stringByReplacingOccurrencesOfString:@"<!-- body -->" withString:meta.body];
+    }
+    
+    if (meta.feedback_body) {
+        html = [html stringByReplacingOccurrencesOfString:@"<!-- feedback_body -->" withString:meta.feedback_body];
+    }
+    
+    if (meta.most) {
+        html = [html stringByReplacingOccurrencesOfString:@"<!-- most -->" withString:meta.most];
+    }
+    
+    if (meta.least) {
+        html = [html stringByReplacingOccurrencesOfString:@"<!-- least -->" withString:meta.least];
+    }
+    
+    if ([parameters valueForKey:@"id"]) {
+        html = [html stringByReplacingOccurrencesOfString:@"<!-- hookpointId -->" withString:[parameters valueForKey:@"id"]];
     }
     
     return html;

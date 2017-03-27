@@ -18,6 +18,7 @@
 #import "UHPushFeed.h"
 #import "UHTemplatesFeed.h"
 #import "UHMessageTemplate.h"
+#import "UHHookPointFeed.h"
 
 static NSString * const UHPathSession = @"session";
 static NSString * const UHPathHookPointFetch = @"hookpoint/next";
@@ -50,10 +51,13 @@ static BOOL fetchingHookpoints;
     
     
     
-    [self updateSessionData:parameters];
+    [self updateSessionData:parameters handler:^(BOOL success) {
+        if (success) {
+            // prefetch message templates when a session is created
+            [self fetchMessageTemplates];
+        }
+    }];
     
-    // prefetch message templates when a session is created
-    [self fetchMessageTemplates];
 }
 
 -(void) updateSessionData:(NSDictionary *)params {
@@ -140,10 +144,15 @@ static BOOL fetchingHookpoints;
 
 }
 
--(void) fetchHookpoint:(UHHookPointHandler) handler {
+-(void) fetchHookpoint:(NSString *) event handler:(UHHookPointHandler) handler {
     
     if (![UHUser userId]) {
         UH_LOG(@"cannot fetch hookpoint, user id is null");
+        return;
+    }
+    
+    if (event == nil) {
+        UH_LOG(@"event is required to fetch hook points");
         return;
     }
     
@@ -154,7 +163,7 @@ static BOOL fetchingHookpoints;
     
     fetchingHookpoints = YES;
     
-    NSDictionary * params = [NSDictionary dictionaryWithObjectsAndKeys:[UHUser userId], @"user", nil];
+    NSDictionary * params = [NSDictionary dictionaryWithObjectsAndKeys:[UHUser userId], @"user", event, @"event", nil];
     
     UHRequest * request = [UHRequest getRequestWithPath:UHPathHookPointFetch parameters:params];
     
@@ -185,28 +194,21 @@ static BOOL fetchingHookpoints;
 
 -(void) handleFetchHookpoint:(NSData *) data handler:(UHHookPointHandler) handler {
     
-    
     NSError *jsonError;
-    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data
-                                                         options:NSJSONReadingMutableContainers
-                                                           error:&jsonError];
+    UHHookPointFeed * feed = [[UHHookPointFeed alloc] initWithData:data error:&jsonError];
     
-    
-    if ([[json valueForKey:@"status"] isEqualToString:@"success"]) {
+    if ([feed.status isEqualToString:@"success"]) {
         
-        NSDictionary * data = [json valueForKey:@"data"];
-        UHHookPoint * hookPoint;
-        
-        if ([data valueForKey:@"hookpoint"] != nil && [data valueForKey:@"hookpoint"] != (id)[NSNull null] && [[data valueForKey:@"hookpoint"] isKindOfClass:[NSDictionary class]]) {
-            hookPoint = [UHHookPoint createWithData:[json valueForKey:@"data"]];
+        if (feed.hookpoint != nil) {
+            
+            UHHookPoint * hookpoint = [UHHookPoint createWithModel:feed.hookpoint];
             
             if (handler) {
-                handler(hookPoint);
+                handler(hookpoint);
             }
-             
         }
-        
     }
+    
 }
 
 -(void) trackHookpointDisplay:(UHHookPoint *)hookPoint {

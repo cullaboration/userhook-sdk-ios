@@ -103,7 +103,7 @@
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 
     // since the app just became active, we will try to load hookpoints
-    [self loadHookpoints];
+    [self loadHookpoints:@"launch"];
 
 }
 
@@ -162,10 +162,10 @@
     return NO;
 }
 
--(void) loadHookpoints {
+-(void) loadHookpoints:(NSString *) event {
     
     // check for UserHooks
-    [UserHook fetchHookPoint:^(UHHookPoint *hookpoint) {
+    [UserHook fetchHookPoint:event handler:^(UHHookPoint *hookpoint) {
         if(hookpoint) {
             [hookpoint execute];
         }

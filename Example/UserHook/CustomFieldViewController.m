@@ -43,7 +43,7 @@
         
         if (success) {
             // fetch hook points after the custom field is saved
-            [((AppDelegate *)[UIApplication sharedApplication].delegate) loadHookpoints];
+            [((AppDelegate *)[UIApplication sharedApplication].delegate) loadHookpoints:@"score_updated"];
         }
     }];
     

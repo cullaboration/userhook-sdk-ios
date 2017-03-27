@@ -10,26 +10,14 @@
 #import "UHMessageView.h"
 #import "UserHook.h"
 
-@interface UHHookPointMessage()
-
-
-
-@end
-
 @implementation UHHookPointMessage
 
-+(NSString *) type {
-    return @"message";
-}
 
--(id) initWithData:(NSDictionary *)data {
-    self = [super initWithData:data];
-    
-    
-    NSDictionary * hookpoint = [data valueForKey:@"hookpoint"];
+-(id) initWithModel:(UHHookPointModel *)model {
+    self = [super initWithModel:model];
     
     NSError * error;
-    self.meta = [[UHMessageMeta alloc] initWithDictionary:[hookpoint valueForKey:@"meta"] error:&error];
+    self.meta = [[UHMessageMeta alloc] initWithDictionary:model.meta error:&error];
     if (error) {
         UH_LOG(@"error parsing message meta: %@", [error localizedDescription]);
     }
@@ -40,21 +28,28 @@
 
 -(void) execute {
     
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        [self addAndShowView];
+        
+    });
+    
+}
+
+-(void) addAndShowView {
+    
     if ([UHMessageView canDisplay]) {
         
-        dispatch_async(dispatch_get_main_queue(), ^{
-            
-            UHMessageView * messageView = [UHMessageView createViewForHookPoint:self];
-            UIViewController * rootController = [UserHook topViewController];
-            messageView.frame = rootController.view.frame;
-            [rootController.view addSubview:messageView];
-            
-            
-            [messageView showDialog];
-            
-        });
+        UHMessageView * messageView = [UHMessageView createViewForHookPoint:self];
+        UIViewController * rootController = [UserHook topViewController];
+        messageView.frame = rootController.view.frame;
+        [rootController.view addSubview:messageView];
+        
+        
+        [messageView showDialog];
+        
     }
-    
 }
 
 

@@ -7,24 +7,32 @@
  */
 
 #import <Foundation/Foundation.h>
+#import "UHHookPointModel.h"
 
 @class UHHookPoint;
+
+extern NSString * const UHHookPointTypeMessage;
+extern NSString * const UHHookPointTypeAction;
+extern NSString * const UHHookPointTypeSurvey;
+extern NSString * const UHHookPointTypeNPS;
+
+// deprecated hook point types
+extern NSString * const UHHookPointTypeActionPrompt;
+extern NSString * const UHHookPointTypeRatingPrompt;
+
 
 typedef void(^UHHookPointHandler)(UHHookPoint * hookpoint);
 
 @interface UHHookPoint : NSObject
 
 @property (nonatomic, strong) NSString * id;
-@property (nonatomic, strong) NSString * name;
 @property (nonatomic, strong) NSString * type;
 
-@property (nonatomic, strong) NSString * applicationName;
-@property (nonatomic, strong) NSString * itunesId;
 
++(id) createWithModel:(UHHookPointModel *) model;
 
-+(id) createWithData:(NSDictionary *)data;
--(id) initWithData:(NSDictionary *)data;
-+(NSString *) type;
+-(id) initWithModel:(UHHookPointModel *)model;
+
 
 -(void) execute;
 

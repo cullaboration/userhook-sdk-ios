@@ -7,10 +7,14 @@
 //
 
 #import <XCTest/XCTest.h>
+#import <OCMock/OCMock.h>
 
+#import <UserHook/UserHook.h>
 #import <UserHook/UHHookPointMessage.h>
 #import <UserHook/UHHookPointAction.h>
 #import <UserHook/UHHookPointSurvey.h>
+#import <UserHook/UHHookPoint.h>
+#import <UserHook/UHMessageView.h>
 
 @interface UHHookpointTest : XCTestCase
 
@@ -18,27 +22,27 @@
 
 @implementation UHHookpointTest
 
-
--(void) testMessageHookpointFromDictionary {
+-(void) testMessageHookpointFromModel {
     
-    NSDictionary * params = @{@"hookpoint" : @{@"type": [UHHookPointMessage type]}};
     
-    UHHookPoint * hookpoint = [UHHookPoint createWithData:params];
+    UHHookPointModel * model = [UHHookPointModel new];
+    model.type = UHHookPointTypeMessage;
+    
+    UHHookPoint * hookpoint = [UHHookPoint createWithModel:model];
     
     XCTAssertEqual([hookpoint class], [UHHookPointMessage class]);
     
 };
 
 
--(void) testSurveyHookpointFromDictionary {
+-(void) testSurveyHookpointFromModel {
     
-
+    UHHookPointModel * model = [UHHookPointModel new];
     
-    NSDictionary * meta = @{@"survey":@"123",@"publicTitle":@"A Title"};
-    NSDictionary * params = @{@"hookpoint" : @{@"type": [UHHookPointSurvey type], @"meta": meta}};
-    params = [params mutableCopy];
+    model.meta = @{@"survey":@"123",@"publicTitle":@"A Title"};;
+    model.type = UHHookPointTypeSurvey;
     
-    UHHookPointSurvey * hookpoint = [UHHookPoint createWithData:params];
+    UHHookPointSurvey * hookpoint = [UHHookPoint createWithModel:model];
     
     
     XCTAssertEqual([hookpoint class], [UHHookPointSurvey class]);
@@ -55,11 +59,12 @@
 
 -(void) testActionHookpointFromDictionary {
     
-    NSDictionary * meta = @{@"payload":@"{\"action\":\"action name\"}"};
     
-    NSDictionary * params = @{@"hookpoint" : @{@"type": [UHHookPointAction type], @"meta":meta}};
+    UHHookPointModel * model = [UHHookPointModel new];
+    model.type = UHHookPointTypeAction;
+    model.meta = @{@"payload":@"{\"action\":\"action name\"}"};
     
-    UHHookPointAction * hookpoint = [UHHookPoint createWithData:params];
+    UHHookPointAction * hookpoint = [UHHookPoint createWithModel:model];
     
     
     XCTAssertEqual([hookpoint class], [UHHookPointAction class]);
@@ -68,6 +73,58 @@
     XCTAssertNotNil(hookpoint.payload);
     XCTAssertEqualObjects([hookpoint.payload valueForKey:@"action"], @"action name");
     
+}
+
+-(void) testExecuteActionHookPoint {
+    
+    
+    id uhMock = OCMClassMock([UserHook class]);
+    
+    UHHookPointAction * hookpoint = [UHHookPointAction new];
+    NSDictionary * payload = @{@"one":@"two"};
+    
+    hookpoint.payload = payload;
+    
+    
+    OCMExpect([uhMock handlePayload:payload]);
+    OCMExpect([uhMock trackHookPointInteraction:hookpoint]);
+    
+    [hookpoint execute];
+    
+    OCMVerifyAll(uhMock);
+    [uhMock stopMocking];
+    
+}
+
+-(void) testHookPointMessageShow {
+    
+    
+    UHHookPointMessage * hookpoint = [UHHookPointMessage new];
+    
+    id messageMock = OCMClassMock([UHMessageView class]);
+    
+    OCMStub([messageMock canDisplay]).andReturn(true);
+    OCMExpect([messageMock createViewForHookPoint:hookpoint]).andReturn(messageMock);
+    OCMExpect([messageMock showDialog]);
+    
+    [hookpoint addAndShowView];
+    
+    OCMVerifyAll(messageMock);
+}
+
+-(void) testHookPointMessageDontShow {
+    
+    
+    UHHookPointMessage * hookpoint = [UHHookPointMessage new];
+    
+    id messageMock = OCMClassMock([UHMessageView class]);
+    
+    OCMStub([messageMock canDisplay]).andReturn(false);
+    OCMReject([messageMock showDialog]);
+    
+    [hookpoint addAndShowView];
+    
+    OCMVerifyAll(messageMock);
 }
 
 @end

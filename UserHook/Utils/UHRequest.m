@@ -113,6 +113,34 @@ static NSString * escapeString(NSString *unencodedString)
     return request;
     
 }
+
++(UHRequest *) requestWithUrl:(NSString *)url httpMethod:(NSString *)method parameters:(NSDictionary *)parameters {
+    
+    NSParameterAssert(url != nil);
+    NSParameterAssert(method != nil);
+    
+    if (parameters != nil && ![method isEqualToString:@"POST"]) {
+        if ([url rangeOfString:@"?"].location == NSNotFound) {
+            url = [url stringByAppendingString:[NSString stringWithFormat:@"?%@", [self parametersToQueryString:parameters]]];
+        }
+        else {
+            url = [url stringByAppendingString:[NSString stringWithFormat:@"&%@", [self parametersToQueryString:parameters]]];
+        }
+    }
+    
+    
+    UHRequest * request = [UHRequest requestWithURL:[NSURL URLWithString:url]];
+    
+    request.HTTPMethod = method;
+    
+    // add parameters
+    if (parameters != nil && [method isEqualToString:@"POST"]) {
+        request.HTTPBody = [[self parametersToQueryString:parameters] dataUsingEncoding:NSUTF8StringEncoding];
+    }
+    
+    return request;
+    
+}
      
 -(void) addUserHookHeaders {
     // add application headers

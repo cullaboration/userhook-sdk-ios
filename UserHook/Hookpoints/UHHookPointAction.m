@@ -11,29 +11,18 @@
 
 @implementation UHHookPointAction
 
-+(NSString *) type {
-    return @"action";
-}
-
-
--(id) initWithData:(NSDictionary *)data {
-    self = [super initWithData:data];
+-(id) initWithModel:(UHHookPointModel *)model {
+    self = [super initWithModel:model];
     
     
-    NSDictionary * hookpoint = [data valueForKey:@"hookpoint"];
-    NSDictionary * meta = [hookpoint valueForKey:@"meta"];
-    if (meta) {
+    if (model.meta && [model.meta valueForKey:@"payload"]) {
+        NSString * payloadString = [model.meta valueForKey:@"payload"];
+        NSData * payloadData = [payloadString dataUsingEncoding:NSUTF8StringEncoding];
+        NSError * error;
+        _payload = [NSJSONSerialization JSONObjectWithData:payloadData options:0 error:&error];
         
-        
-        if ([meta valueForKey:@"payload"]) {
-            NSString * payloadString = [meta valueForKey:@"payload"];
-            NSData * payloadData = [payloadString dataUsingEncoding:NSUTF8StringEncoding];
-            NSError * error;
-            _payload = [NSJSONSerialization JSONObjectWithData:payloadData options:0 error:&error];
-            
-            if (error) {
-                UH_LOG(@"error parsing payload: %@", [error localizedDescription]);
-            }
+        if (error) {
+            UH_LOG(@"error parsing payload: %@", [error localizedDescription]);
         }
     }
     

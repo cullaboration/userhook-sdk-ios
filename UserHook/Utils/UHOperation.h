@@ -20,7 +20,7 @@
 -(void) updateSessionData:(NSDictionary *) params;
 -(void) updateSessionData:(NSDictionary *) params handler:(UHResponseHandler) handler;
 
--(void) fetchHookpoint:(UHHookPointHandler) handler;
+-(void) fetchHookpoint:(NSString  *)event handler:(UHHookPointHandler) handler;
 -(void) trackHookpointDisplay:(UHHookPoint *) hookPoint;
 -(void) trackHookpointInteraction:(UHHookPoint *) hookPoint;
 

@@ -16,7 +16,7 @@
 #import "UHOperation.h"
 #import "UHHandlers.h"
 
-#define UH_SDK_VERSION @"1.3.2"
+#define UH_SDK_VERSION @"2.0.0"
 #define UH_API_VERSION @"1"
 #define UH_API_URL @"https://api.userhook.com/"
 #define UH_HOST_URL @"https://formhost.userhook.com/"
@@ -48,6 +48,10 @@
 
 @property (nonatomic, copy) NSString * navControllerClassName;
 @property (nonatomic, copy) UHPayloadHandler payloadHandler;
+
+
+@property (nonatomic, assign) int dialogWidth;
+
 
 +(void) setApplicationId:(NSString *) applicationId apiKey:(NSString *) apiKey;
 +(UserHook *) sharedInstance;
@@ -81,7 +85,7 @@
 +(void) updatePurchasedItem:(NSString *)sku forAmount:(NSNumber *)pric handler:(UHResponseHandler) handler;
 
 # pragma mark - hook points
-+(void) fetchHookPoint:(UHHookPointHandler) handler;
++(void) fetchHookPoint:(NSString *)event handler:(UHHookPointHandler) handler;
 +(void) trackHookPointDisplay:(UHHookPoint *) hookPoint;
 +(void) trackHookPointInteraction:(UHHookPoint *) hookPoint;
 
