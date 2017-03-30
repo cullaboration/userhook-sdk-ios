@@ -30,6 +30,7 @@
 		223A74DF1D539BD1007C4ED1 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 223A74D01D539BD1007C4ED1 /* menu@2x.png */; };
 		223A74E01D539BD1007C4ED1 /* menu@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 223A74D11D539BD1007C4ED1 /* menu@3x.png */; };
 		223A74E41D539F20007C4ED1 /* userhook.plist in Resources */ = {isa = PBXBuildFile; fileRef = 223A74E31D539F20007C4ED1 /* userhook.plist */; };
+		22CBC4A01E8D98D4006D992E /* CHANGELOG.md in Sources */ = {isa = PBXBuildFile; fileRef = 22CBC49F1E8D98D4006D992E /* CHANGELOG.md */; };
 		22E9C6581D9EBB9400C4296D /* UHHookpointTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E9C6571D9EBB9400C4296D /* UHHookpointTest.m */; };
 		22E9C65C1D9EE72B00C4296D /* UHRequestTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E9C65B1D9EE72B00C4296D /* UHRequestTest.m */; };
 		22E9C6701DA2CE3E00C4296D /* UHOperationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E9C66F1DA2CE3E00C4296D /* UHOperationTest.m */; };
@@ -94,6 +95,7 @@
 		223A74D01D539BD1007C4ED1 /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
 		223A74D11D539BD1007C4ED1 /* menu@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@3x.png"; sourceTree = "<group>"; };
 		223A74E31D539F20007C4ED1 /* userhook.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = userhook.plist; sourceTree = "<group>"; };
+		22CBC49F1E8D98D4006D992E /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		22E9C6571D9EBB9400C4296D /* UHHookpointTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UHHookpointTest.m; sourceTree = "<group>"; };
 		22E9C65B1D9EE72B00C4296D /* UHRequestTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UHRequestTest.m; sourceTree = "<group>"; };
 		22E9C66F1DA2CE3E00C4296D /* UHOperationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UHOperationTest.m; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
+				22CBC49F1E8D98D4006D992E /* CHANGELOG.md */,
 				22F90BD21DA84AAA009ECB6E /* UserHook_Example.entitlements */,
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* Example for UserHook */,
@@ -443,7 +446,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		7808EBD7C73A33A0F34AD5D7 /* [CP] Copy Pods Resources */ = {
@@ -488,7 +491,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		E0C1FDD7D5EA677D38DD8A03 /* [CP] Copy Pods Resources */ = {
@@ -514,6 +517,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				223A74D41D539BD1007C4ED1 /* MFSideMenuShadow.m in Sources */,
+				22CBC4A01E8D98D4006D992E /* CHANGELOG.md in Sources */,
 				223A74BC1D539B73007C4ED1 /* CustomFieldViewController.m in Sources */,
 				223A74B51D539B73007C4ED1 /* AppDelegate.m in Sources */,
 				223A74D51D539BD1007C4ED1 /* UIViewController+MFSideMenuAdditions.m in Sources */,

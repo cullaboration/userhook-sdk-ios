@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'UserHook'
-  s.version          = '2.0.0'
+  s.version          = '2.1.0'
   s.summary          = 'iOS SDK for the User Hook service'
 
   s.homepage         = 'https://userhook.com'
@@ -17,6 +17,6 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/cullaboration/userhook-sdk-ios.git', :tag => s.version.to_s }
   s.ios.deployment_target = '8.0'
   s.source_files = 'UserHook/**/**'
-  s.frameworks = 'UIKit','Photos'
-  s.dependency 'JSONModel'
+  s.frameworks = 'UIKit','Photos','StoreKit'
+  s.dependency 'JSONModel', '~> 1.7'
 end
