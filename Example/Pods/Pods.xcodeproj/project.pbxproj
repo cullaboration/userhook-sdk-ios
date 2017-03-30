@@ -35,6 +35,8 @@
 		22A508B81E81BEB500B947B4 /* UHHookPointModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A508B21E81BDCC00B947B4 /* UHHookPointModel.m */; };
 		22A5CD6F1E09B258001703BD /* UHNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 22A5CD6D1E09B258001703BD /* UHNavigationController.h */; };
 		22A5CD701E09B258001703BD /* UHNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A5CD6E1E09B258001703BD /* UHNavigationController.m */; };
+		22CBC49D1E8D8778006D992E /* UHRater.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CBC49A1E8D8684006D992E /* UHRater.m */; };
+		22CBC49E1E8D877C006D992E /* UHRater.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CBC4991E8D8684006D992E /* UHRater.h */; };
 		27EB289F17DF6841D8D4581C5ED5FBD1 /* JSONModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48FFF1693B823D0F4709BFE77CBDCE1C /* JSONModel.framework */; };
 		28D8BE332B877A76602BCC1C8A28C89C /* UHFeed.h in Headers */ = {isa = PBXBuildFile; fileRef = C6157315C3D9D18780D0FBCD34BAEF5C /* UHFeed.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2A8173E720F12D5F9CCD6001D0228D2D /* OCMArgAction.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E4E27FDEB1F854851E43B16AD767FC /* OCMArgAction.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -241,6 +243,8 @@
 		22A508B21E81BDCC00B947B4 /* UHHookPointModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UHHookPointModel.m; sourceTree = "<group>"; };
 		22A5CD6D1E09B258001703BD /* UHNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UHNavigationController.h; sourceTree = "<group>"; };
 		22A5CD6E1E09B258001703BD /* UHNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UHNavigationController.m; sourceTree = "<group>"; };
+		22CBC4991E8D8684006D992E /* UHRater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UHRater.h; sourceTree = "<group>"; };
+		22CBC49A1E8D8684006D992E /* UHRater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UHRater.m; sourceTree = "<group>"; };
 		277795B36F5FE5A988C8729B33C0D8B4 /* Pods-UserHook_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-UserHook_Example.modulemap"; sourceTree = "<group>"; };
 		288D323260DC8BA0C58051BF7B8F4FEB /* UHSessionFeed.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UHSessionFeed.h; sourceTree = "<group>"; };
 		28AC8138DA486C1919EE436CFF48EA3E /* UHDeviceInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UHDeviceInfo.m; sourceTree = "<group>"; };
@@ -510,6 +514,8 @@
 				701CF6F7C32550AE2CC0C7A1EF831076 /* UHRequest.m */,
 				A4D4125EEC345153A039D26AF11E2E68 /* UHUser.h */,
 				E8E114453FE45A207FE8716F819B5666 /* UHUser.m */,
+				22CBC4991E8D8684006D992E /* UHRater.h */,
+				22CBC49A1E8D8684006D992E /* UHRater.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -856,6 +862,7 @@
 				28D8BE332B877A76602BCC1C8A28C89C /* UHFeed.h in Headers */,
 				22A508AB1E81969C00B947B4 /* UHHookPointNPS.h in Headers */,
 				01C983B241D966BA1DA8ADA6918F1297 /* UHHandlers.h in Headers */,
+				22CBC49E1E8D877C006D992E /* UHRater.h in Headers */,
 				DA8D931F3E6C60680A4EB03351539534 /* UHHookPoint.h in Headers */,
 				3B149C1B8149151C49BA4201F5D915F2 /* UHHookPointAction.h in Headers */,
 				C405AFD07A9CDF22D5E6BBD960CCDDBF /* UHHookPointMessage.h in Headers */,
@@ -1046,6 +1053,7 @@
 				6781F19411E61B40245EC9BA4270E33E /* UHMessageMeta.m in Sources */,
 				830C61DC96F365F7B45DAF176D32D050 /* UHMessageTemplate.m in Sources */,
 				FE039C72D3B22D33DBC855BB3EF80C67 /* UHMessageView.m in Sources */,
+				22CBC49D1E8D8778006D992E /* UHRater.m in Sources */,
 				658395D9F52BAD01B33C01CEE6AC17F2 /* UHOperation.m in Sources */,
 				2CE8B5BA24882C33357ED775D25B35A7 /* UHPage.m in Sources */,
 				A2421B76880D90D8EE884843EED02BBF /* UHPagesFeed.m in Sources */,

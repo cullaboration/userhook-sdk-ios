@@ -16,7 +16,7 @@
 #import "UHOperation.h"
 #import "UHHandlers.h"
 
-#define UH_SDK_VERSION @"2.0.0"
+#define UH_SDK_VERSION @"2.1.0"
 #define UH_API_VERSION @"1"
 #define UH_API_URL @"https://api.userhook.com/"
 #define UH_HOST_URL @"https://formhost.userhook.com/"
@@ -79,6 +79,7 @@
 +(void) updateCustomFields:(NSDictionary *)data handler:(UHResponseHandler) handler;
 
 -(void) setApplicationData:(UHApplication *) application;
+-(UHApplication *) applicationData;
 
 +(void) markRated;
 +(void) updatePurchasedItem:(NSString *)sku forAmount:(NSNumber *)price;

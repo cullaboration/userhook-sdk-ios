@@ -15,6 +15,7 @@
 #import "UHMessageView.h"
 #import "UHMessageMeta.h"
 #import "UHNavigationController.h"
+#import "UHRater.h"
 
 @interface UserHook()
 
@@ -65,6 +66,10 @@ static UserHook * _sharedInstance;
 
 -(void) setApplicationData:(UHApplication *) application {
     self.application = application;
+}
+
+-(UHApplication *) applicationData {
+    return self.application;
 }
 
 +(UserHook *) sharedInstance {
@@ -351,15 +356,8 @@ static UserHook * _sharedInstance;
 #pragma mark - actions
 +(void) rateThisApp {
     
-    if ([UserHook sharedInstance].application.itunes_id) {
-        
-        // open this app's page in itunes
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"itms-apps://itunes.apple.com/app/id%@", _sharedInstance.application.itunes_id]]];
-        
-        // mark that this user has "rated" this app
-        [UserHook markRated];
-        
-    }
+    [UHRater rateApp];
+
 }
 
 
