@@ -13,9 +13,9 @@
 
 
 +(JSONKeyMapper*)keyMapper {
-    return [[JSONKeyMapper alloc] initWithDictionary:@{
-                                                       @"data.hookpoint": @"hookpoint"
-                                                       }];
+    return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{
+                                                                  @"hookpoint": @"data.hookpoint"
+                                                                  }];
 }
 
 

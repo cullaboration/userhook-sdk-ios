@@ -1,6 +1,6 @@
 {
   "name": "UserHook",
-  "version": "1.1.3",
+  "version": "2.1.0",
   "summary": "iOS SDK for the User Hook service",
   "homepage": "https://userhook.com",
   "license": {
@@ -11,17 +11,20 @@
     "User Hook": "info@cullaboration.com"
   },
   "source": {
-    "git": "https://github.com/cullaboration/userhook-sdk-ios.git",
-    "tag": "1.1.3"
+    "git": "https://github.com/cullaboration/userhook-sdk-ios.git"
   },
   "platforms": {
     "ios": "8.0"
   },
   "source_files": "UserHook/**/**",
-  "frameworks": "UIKit",
+  "frameworks": [
+    "UIKit",
+    "Photos",
+    "StoreKit"
+  ],
   "dependencies": {
     "JSONModel": [
-
+      "~> 1.7"
     ]
   }
 }
